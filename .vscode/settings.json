@@ -1,0 +1,127 @@
+{
+    // ── Editor ──────────────────────────────────────────────────────────
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "editor.tabSize": 4,
+    "diffEditor.ignoreTrimWhitespace": false,
+    // ── Terminal ────────────────────────────────────
+    "terminal.integrated.enablePersistentSessions": false,
+    // ── Git ─────────────────────────────────────────────────────────────
+    "git.allowNoVerifyCommit": true,
+    "git.allowForcePush": true,
+    "git.confirmSync": false,
+    "git.blame.editorDecoration.enabled": true,
+    "git.blame.statusBarItem.enabled": true,
+    // ── Language-Specific Overrides ─────────────────────────────────────
+    "[c]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "[cpp]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.wordBasedSuggestions": "off",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.stickyScroll.defaultModel": "outlineModel",
+        "editor.suggest.insertMode": "replace"
+    },
+    // -------------------------------------------------------------------------
+    // clangd — IntelliSense, code completion, diagnostics, formatting
+    // -------------------------------------------------------------------------
+    "clangd.arguments": [
+        "--background-index",
+        "--clang-tidy",
+        "--completion-style=detailed",
+        "--header-insertion=iwyu",
+        "--log=error"
+    ],
+    // -------------------------------------------------------------------------
+    // cmake-tools
+    // -------------------------------------------------------------------------
+    // Copy compile_commands.json to the workspace root after each configure
+    // so clangd can locate it without a hardcoded path in .clangd
+    "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
+    // Prefer CMakePresets.json when it exists
+    "cmake.useCMakePresets": "auto",
+    // Debugger config used by the cmake debug button and CMake: Debug Target command
+    "cmake.debugConfig": {
+        "type": "cppdbg",
+        "console": "integratedTerminal",
+        "stopAtEntry": true
+    },
+    // Status bar: make all workflow buttons visible
+    "cmake.options.statusBarVisibility": "visible",
+    "cmake.options.advanced": {
+        "build": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        },
+        "launch": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        },
+        "debug": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        },
+        "cpack": {
+            "statusBarVisibility": "hidden",
+            "inheritDefault": "visible"
+        },
+        "workflow": {
+            "statusBarVisibility": "hidden",
+            "inheritDefault": "visible"
+        },
+        "workflowPreset": {
+            "statusBarVisibility": "hidden",
+            "inheritDefault": "visible"
+        },
+        "packagePreset": {
+            "statusBarVisibility": "hidden",
+            "inheritDefault": "visible"
+        },
+        "buildTarget": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        },
+        "configurePreset": {
+            "statusBarVisibility": "hidden",
+            "inheritDefault": "visible"
+        },
+        "testPreset": {
+            "statusBarVisibility": "hidden",
+            "inheritDefault": "visible"
+        },
+        "launchTarget": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        },
+        "buildPreset": {
+            "statusBarVisibility": "hidden",
+            "inheritDefault": "visible"
+        },
+        "configure": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        },
+        "ctest": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        },
+        "kit": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        },
+        "variant": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        },
+        "folder": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        }
+    },
+    // ── C/C++ Extension (cpptools) ──────────────────────────────────────
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "C_Cpp.formatting": "disabled",
+}

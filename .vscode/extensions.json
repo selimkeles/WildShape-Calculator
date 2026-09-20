@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        // CMake project configuration, build, and test integration
+        "ms-vscode.cmake-tools",
+        // clangd: IntelliSense, code completion, diagnostics, formatting
+        "llvm-vs-code-extensions.vscode-clangd",
+        // cpptools: required for cppvsdbg (MSVC) and cppdbg (GDB) debuggers
+        "ms-vscode.cpptools"
+    ]
+}

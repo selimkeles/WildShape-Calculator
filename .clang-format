@@ -1,0 +1,57 @@
+---
+BasedOnStyle: LLVM
+
+# Alignment
+AlignAfterOpenBracket: Align
+AlignConsecutiveMacros:
+  Enabled: true
+AlignConsecutiveBitFields:
+  Enabled: true
+AlignEscapedNewlines: Left
+AlignOperands: true
+
+# Short constructs
+AllowShortBlocksOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortLambdasOnASingleLine: None
+
+# Packing
+BinPackArguments: false
+BinPackParameters: false
+
+# Braces & Operators
+BreakBeforeBraces: Allman
+BreakBeforeTernaryOperators: false
+InsertBraces: true
+
+# Column & Indent
+ColumnLimit: 120
+IndentCaseLabels: true
+IndentWidth: 4
+
+# Pointers & Qualifiers
+DerivePointerAlignment: true
+PointerAlignment: Right
+QualifierAlignment: Left
+
+# Includes
+IncludeBlocks: Regroup
+SortIncludes: true
+
+# Spacing
+MaxEmptyLinesToKeep: 1
+SpacesBeforeTrailingComments: 4
+BitFieldColonSpacing: Before
+
+# Empty lines & EOF
+InsertNewlineAtEOF: true
+KeepEmptyLines:
+  AtStartOfBlock: false
+  AtEndOfFile: false
+  AtStartOfFile: false
+
+# Misc
+LineEnding: CRLF
+RemoveParentheses: MultipleParentheses
+SeparateDefinitionBlocks: Always
+...

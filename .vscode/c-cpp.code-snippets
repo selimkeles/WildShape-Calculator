@@ -1,0 +1,135 @@
+{
+    // ── File boilerplate ──────────────────────────────────────────────────────
+    "Include guard": {
+        "scope": "c,cpp",
+        "prefix": "guard",
+        "body": [
+            "#ifndef ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H",
+            "#define ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H",
+            "",
+            "$0",
+            "",
+            "#endif // ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H"
+        ],
+        "description": "Include guard using filename"
+    },
+
+    // ── C++ class ─────────────────────────────────────────────────────────────
+    "C++ class": {
+        "scope": "cpp",
+        "prefix": "cls",
+        "body": [
+            "class ${1:MyClass}",
+            "{",
+            "  public:",
+            "    ${1:MyClass}();",
+            "    ~${1:MyClass}();",
+            "",
+            "  private:",
+            "    $0",
+            "};"
+        ],
+        "description": "C++ class skeleton"
+    },
+
+    // ── C struct ──────────────────────────────────────────────────────────────
+    "C struct": {
+        "scope": "c,cpp",
+        "prefix": "str",
+        "body": [
+            "typedef struct",
+            "{",
+            "    $0",
+            "} ${1:MyStruct}_t;"
+        ],
+        "description": "C typedef struct"
+    },
+
+    // ── Loops ─────────────────────────────────────────────────────────────────
+    "For loop (index)": {
+        "scope": "c,cpp",
+        "prefix": "fori",
+        "body": [
+            "for (${1:int} ${2:i} = 0; ${2:i} < ${3:count}; ${2:i}++)",
+            "{",
+            "    $0",
+            "}"
+        ],
+        "description": "Index-based for loop"
+    },
+    "For range loop": {
+        "scope": "cpp",
+        "prefix": "forr",
+        "body": [
+            "for (auto& ${1:item} : ${2:container})",
+            "{",
+            "    $0",
+            "}"
+        ],
+        "description": "Range-based for loop"
+    },
+
+    // ── Switch ────────────────────────────────────────────────────────────────
+    "Switch statement": {
+        "scope": "c,cpp",
+        "prefix": "sw",
+        "body": [
+            "switch (${1:var})",
+            "{",
+            "    case ${2:value}:",
+            "        $0",
+            "        break;",
+            "    default:",
+            "        break;",
+            "}"
+        ],
+        "description": "Switch statement"
+    },
+
+    // ── Enum ──────────────────────────────────────────────────────────────────
+    "Enum class": {
+        "scope": "cpp",
+        "prefix": "enm",
+        "body": [
+            "enum class ${1:MyEnum} : ${2:uint8_t}",
+            "{",
+            "    $0",
+            "};"
+        ],
+        "description": "Scoped enum with underlying type"
+    },
+
+    // ── extern "C" ────────────────────────────────────────────────────────────
+    "Extern C block": {
+        "scope": "c,cpp",
+        "prefix": "extc",
+        "body": [
+            "#ifdef __cplusplus",
+            "extern \"C\" {",
+            "#endif",
+            "",
+            "$0",
+            "",
+            "#ifdef __cplusplus",
+            "}",
+            "#endif"
+        ],
+        "description": "extern \"C\" guard block for C/C++ compatible headers"
+    },
+
+    // ── Comments ──────────────────────────────────────────────────────────────
+    "TODO": {
+        "scope": "c,cpp",
+        "prefix": "todo",
+        "body": "// TODO: $0",
+        "description": "TODO comment"
+    },
+    "Section banner": {
+        "scope": "c,cpp",
+        "prefix": "banner",
+        "body": [
+            "// ── ${1:Section} ${2:──────────────────────────────────────────────────────────}"
+        ],
+        "description": "Section separator comment"
+    }
+}

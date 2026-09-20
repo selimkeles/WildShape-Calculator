@@ -1,0 +1,70 @@
+{
+    "version": 6,
+    "cmakeMinimumRequired": { "major": 3, "minor": 20, "patch": 0 },
+    "configurePresets": [
+        {
+            "name": "base",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "BUILD_TESTS": "ON"
+            }
+        },
+        {
+            "name": "windows-clang-debug",
+            "displayName": "Windows Clang Ninja Debug",
+            "inherits": "base",
+            "generator": "Ninja",
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Windows"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "clang.exe",
+                "CMAKE_CXX_COMPILER": "clang++.exe",
+                "CMAKE_RC_COMPILER": "llvm-rc.exe"
+            }
+        },
+        {
+            "name": "windows-clang-release",
+            "displayName": "Windows Clang Ninja Release",
+            "inherits": "windows-clang-debug",
+            "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
+        },
+        {
+            "name": "linux-gcc-debug",
+            "displayName": "Linux GCC Debug",
+            "inherits": "base",
+            "generator": "Ninja",
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++"
+            }
+        },
+        {
+            "name": "linux-gcc-release",
+            "displayName": "Linux GCC Release",
+            "inherits": "linux-gcc-debug",
+            "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
+        }
+    ],
+    "buildPresets": [
+        { "name": "windows-clang-debug",    "configurePreset": "windows-clang-debug" },
+        { "name": "windows-clang-release",  "configurePreset": "windows-clang-release" },
+        { "name": "linux-gcc-debug",      "configurePreset": "linux-gcc-debug" },
+        { "name": "linux-gcc-release",    "configurePreset": "linux-gcc-release" }
+    ],
+    "testPresets": [
+        { "name": "windows-clang-debug",  "configurePreset": "windows-clang-debug",  "output": { "outputOnFailure": true } },
+        { "name": "linux-gcc-debug",      "configurePreset": "linux-gcc-debug",       "output": { "outputOnFailure": true } }
+    ]
+}
