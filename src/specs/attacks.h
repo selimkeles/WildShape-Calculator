@@ -21,7 +21,11 @@ typedef enum
     NW_RAKE,
     NW_CONSTRICT,
     NW_REND,
-    NW_POWERFULL_CHARGE
+    NW_POWERFULL_CHARGE,
+    NW_TALON,
+    NW_SLAM,
+    NW_TAIL_SLAP,
+    NW_ARMS
 } natural_weapon_type_t;
 
 typedef enum
@@ -37,7 +41,10 @@ typedef enum
     SA_REND,
     SA_FEROCITY,
     SA_RAGE,
-    SA_POWERFUL_CHARGE
+    SA_POWERFUL_CHARGE,
+    SA_ATTACH,
+    SA_BLOOD_DRAIN,
+    SA_DISEASE
     // ...
 } special_attack_type_t;
 

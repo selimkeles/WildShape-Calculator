@@ -1,8 +1,10 @@
 #ifndef CREATURES_H
 #define CREATURES_H
+
 #include "specs/attacks.h"
 #include "specs/movement.h"
 #include "specs/specs.h"
+
 
 typedef struct
 {
@@ -21,6 +23,7 @@ typedef struct
     int will;
     speed_t speed[MAX_MOVEMENT_TYPE];
     attacks_t attacks;
+    char *notes;
 } animal_specs_t;
 
 extern const animal_specs_t animals[];

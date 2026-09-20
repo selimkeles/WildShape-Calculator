@@ -122,6 +122,18 @@ const char *natural_weapon_type_to_string(natural_weapon_type_t type)
         case NW_POWERFULL_CHARGE:
             return "Powerful Charge";
 
+        case NW_TALON:
+            return "Talon";
+
+        case NW_SLAM:
+            return "Slam";
+
+        case NW_TAIL_SLAP:
+            return "Tail Slap";
+
+        case NW_ARMS:
+            return "Arms";
+
         default:
             return "Unknown";
     }
@@ -166,6 +178,15 @@ const char *special_attack_type_to_string(special_attack_type_t type)
 
         case SA_POWERFUL_CHARGE:
             return "Powerful Charge";
+
+        case SA_ATTACH:
+            return "Attach";
+
+        case SA_BLOOD_DRAIN:
+            return "Blood Drain";
+
+        case SA_DISEASE:
+            return "Disease";
 
         default:
             return "Unknown";
@@ -296,6 +317,10 @@ void print_animal(const wildshape_form_t *animal)
 
         print_row("", buffer);
     }
+
+    print_section_separator();
+
+    print_row("Notes", animal->notes);
 
     print_separator();
 }

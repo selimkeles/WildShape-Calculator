@@ -4,6 +4,8 @@
 #include "attacks.h"
 #include "movement.h"
 
+#include <stdbool.h>
+
 typedef enum
 {
     TYPE_ANIMAL,
@@ -56,6 +58,7 @@ typedef struct
     char *name;
     int init;
     int bab;
+    bool allowed;
     animal_size_t size;
     ability_scores_t ability_scores;
     ability_modifier_t ability_modifiers;
@@ -65,6 +68,7 @@ typedef struct
     int grapple;
     speed_t speed[MAX_MOVEMENT_TYPE];
     attacks_t attacks;
+    char *notes;
 } wildshape_form_t;
 
 #endif

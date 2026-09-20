@@ -1,7 +1,7 @@
 #ifndef MOVEMENT_H
 #define MOVEMENT_H
 
-#define MAX_MOVEMENT_TYPE 2
+#define MAX_MOVEMENT_TYPE 3
 
 typedef enum
 {

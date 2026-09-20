@@ -45,6 +45,7 @@ static void copy_const_stats(animal_specs_t *animal, wildshape_form_t *ws_form)
     ws_form->size = animal->size;
     ws_form->armorclass = animal->armorclass;
     ws_form->reach = animal->reach;
+    ws_form->notes = animal->notes;
 }
 
 static void copy_ability_stats(animal_specs_t *animal, ability_scores_t *new_stats)
@@ -146,6 +147,44 @@ static void calculate_attacks(animal_specs_t *animal, wildshape_form_t *ws_form)
     calculate_special_attacks(animal, ws_form);
 }
 
+static void calculate_ws_allowance(animal_specs_t *animal, wildshape_form_t *ws_form)
+{
+    ws_form->allowed = false;
+    if (animal->hd > HERO_DRUID_LV)
+    {
+        return;
+    }
+    else if (HERO_DRUID_LV < 12 && animal->type > TYPE_ANIMAL)
+    {
+        return;
+    }
+    else if (HERO_DRUID_LV < 16 && animal->type > TYPE_PLANT)
+    {
+        return;
+    }
+    else if (HERO_DRUID_LV < 9 && (animal->size < SIZE_SMALL || animal->size > SIZE_MEDIUM))
+    {
+        return;
+    }
+    else if (HERO_DRUID_LV < 11 && (animal->size < SIZE_SMALL || animal->size > SIZE_LARGE))
+    {
+        return;
+    }
+    else if (HERO_DRUID_LV < 15 && (animal->size < SIZE_TINY || animal->size > SIZE_LARGE))
+    {
+        return;
+    }
+    else if (animal->size < SIZE_TINY || animal->size > SIZE_HUGE)
+    {
+        return;
+    }
+    else
+    {
+        ws_form->allowed = true;
+        return;
+    }
+}
+
 wildshape_form_t calc_new_stats(animal_specs_t animal_base)
 {
     wildshape_form_t ws_form = {0};
@@ -156,5 +195,6 @@ wildshape_form_t calc_new_stats(animal_specs_t animal_base)
     calculate_saves(&ws_form);
     copy_movement_stats(&animal_base, &ws_form);
     calculate_attacks(&animal_base, &ws_form);
+    calculate_ws_allowance(&animal_base, &ws_form);
     return ws_form;
 }
