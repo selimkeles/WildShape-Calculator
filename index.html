@@ -1,0 +1,746 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>D&D 3.5 Wild Shape</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            margin: 0;
+            padding: 24px;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        input,
+        select,
+        button {
+            font: inherit;
+            padding: 8px 10px;
+        }
+
+        input {
+            min-width: 250px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            background: white;
+            border: 1px solid #ccc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            white-space: nowrap;
+        }
+
+        th,
+        td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            position: sticky;
+            top: 0;
+            background: #eee;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        tbody tr {
+            cursor: pointer;
+        }
+
+        tbody tr:hover {
+            background: #f0f0f0;
+        }
+
+        .allowed {
+            font-weight: bold;
+        }
+
+        .not-allowed {
+            opacity: 0.45;
+        }
+
+        .details {
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            display: none;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+        }
+
+        .detail-group {
+            padding: 10px;
+            background: #f5f5f5;
+        }
+
+        .detail-group h3 {
+            margin-top: 0;
+        }
+
+        .attack {
+            margin-bottom: 6px;
+        }
+
+        #status {
+            margin-bottom: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>D&D 3.5 Wild Shape</h1>
+
+<div class="controls">
+    <input
+        type="search"
+        id="search"
+        placeholder="Search animals..."
+    >
+
+    <select id="size-filter">
+        <option value="">All sizes</option>
+    </select>
+
+    <select id="type-filter">
+        <option value="">All types</option>
+    </select>
+
+    <select id="allowed-filter">
+        <option value="">All forms</option>
+        <option value="true">Allowed</option>
+        <option value="false">Not allowed</option>
+    </select>
+</div>
+
+<div id="status"></div>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th data-sort="name">Name</th>
+                <th data-sort="size">Size</th>
+                <th data-sort="armorclass">AC</th>
+                <th data-sort="reach">Reach</th>
+                <th data-sort="grapple">Grapple</th>
+
+                <th data-sort="strength">STR</th>
+                <th data-sort="dexterity">DEX</th>
+                <th data-sort="constitution">CON</th>
+
+                <th data-sort="fortitude">Fort</th>
+                <th data-sort="reflex">Ref</th>
+                <th data-sort="will">Will</th>
+
+                <th data-sort="fastest">Fastest</th>
+
+                <th>
+                    Natural Attacks
+                    <button class="sort-button" data-sort="attack_bonus">
+                        AB
+                    </button>
+                    <button class="sort-button" data-sort="damage_bonus">
+                        DMG
+                    </button>
+                    <button class="sort-button" data-sort="dice">
+                        DICE
+                    </button>
+                </th>
+
+                <th>Full Attack</th>
+                <th>Special Attacks</th>
+            </tr>
+        </thead>
+
+        <tbody id="animal-table"></tbody>
+    </table>
+</div>
+
+<div id="details" class="details"></div>
+
+<script>
+
+    const DICE_ORDER = [
+    "1d0",
+    "1d2",
+    "1d3",
+    "1d4",
+    "1d6",
+    "1d8",
+    "2d4",
+    "1d10",
+    "2d6",
+    "2d8",
+    "3d6",
+    "3d8",
+    "4d6",
+    "4d8",
+    "6d6",
+    "6d8",
+    "8d6",
+    "8d8",
+    "12d6",
+    "12d8"
+    ];
+
+    const DICE_RANK = new Map(
+        DICE_ORDER.map((dice, index) => [dice, index])
+    );
+
+    let animals = [];
+    let filteredAnimals = [];
+
+    let sortColumn = "name";
+    let sortAscending = true;
+
+
+    /*
+     * Load JSON
+     */
+
+    async function loadAnimals() {
+        try {
+            const response = await fetch("wildshape.json");
+
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            animals = data.animals;
+            filteredAnimals = [...animals];
+
+            populateFilters();
+            renderTable();
+
+        } catch (error) {
+            document.getElementById("status").textContent =
+                "Failed to load wildshape.json: " + error;
+        }
+    }
+
+
+    /*
+     * Filters
+     */
+
+    function populateFilters() {
+        const sizes = [...new Set(
+            animals.map(animal => animal.size)
+        )].sort();
+
+        const types = [...new Set(
+            animals.map(animal => animal.type)
+        )].sort();
+
+        const sizeFilter = document.getElementById("size-filter");
+        const typeFilter = document.getElementById("type-filter");
+
+        for (const size of sizes) {
+            const option = document.createElement("option");
+            option.value = size;
+            option.textContent = size;
+            sizeFilter.appendChild(option);
+        }
+
+        for (const type of types) {
+            const option = document.createElement("option");
+            option.value = type;
+            option.textContent = type;
+            typeFilter.appendChild(option);
+        }
+    }
+
+
+    function applyFilters() {
+        const search =
+            document.getElementById("search").value.toLowerCase();
+
+        const size =
+            document.getElementById("size-filter").value;
+
+        const type =
+            document.getElementById("type-filter").value;
+
+        const allowed =
+            document.getElementById("allowed-filter").value;
+
+        filteredAnimals = animals.filter(animal => {
+
+            if (
+                search &&
+                !animal.name.toLowerCase().includes(search)
+            ) {
+                return false;
+            }
+
+            if (size && animal.size !== size) {
+                return false;
+            }
+
+            if (type && animal.type !== type) {
+                return false;
+            }
+
+            if (
+                allowed &&
+                String(animal.allowed) !== allowed
+            ) {
+                return false;
+            }
+
+            return true;
+        });
+
+        sortAnimals();
+        renderTable();
+    }
+
+    /*
+     * Sorting
+     */
+
+    function sortAnimals() {
+        filteredAnimals.sort((a, b) => {
+
+            let valueA;
+            let valueB;
+
+            switch (sortColumn) {
+
+                case "strength":
+                    valueA = a.ability_scores.strength;
+                    valueB = b.ability_scores.strength;
+                    break;
+
+                case "dexterity":
+                    valueA = a.ability_scores.dexterity;
+                    valueB = b.ability_scores.dexterity;
+                    break;
+
+                case "constitution":
+                    valueA = a.ability_scores.constitution;
+                    valueB = b.ability_scores.constitution;
+                    break;
+
+                case "fortitude":
+                    valueA = a.saves.fortitude;
+                    valueB = b.saves.fortitude;
+                    break;
+
+                case "reflex":
+                    valueA = a.saves.reflex;
+                    valueB = b.saves.reflex;
+                    break;
+
+                case "will":
+                    valueA = a.saves.will;
+                    valueB = b.saves.will;
+                    break;
+
+                case "fastest":
+                    valueA = getFastestSpeed(a)?.range ?? -1;
+                    valueB = getFastestSpeed(b)?.range ?? -1;
+                    break;
+
+                case "attack_bonus":
+                valueA = getHighestAttackBonus(a);
+                valueB = getHighestAttackBonus(b);
+                break;
+
+                case "damage_bonus":
+                    valueA = getHighestDamageBonus(a);
+                    valueB = getHighestDamageBonus(b);
+                    break;
+
+                case "dice":
+                    valueA = getHighestDiceRank(a);
+                    valueB = getHighestDiceRank(b);
+                    break;
+
+                default:
+                    valueA = a[sortColumn];
+                    valueB = b[sortColumn];
+                    break;
+            }
+
+            if (typeof valueA === "string") {
+                return sortAscending
+                    ? valueA.localeCompare(valueB)
+                    : valueB.localeCompare(valueA);
+            }
+
+            return sortAscending
+                ? valueA - valueB
+                : valueB - valueA;
+        });
+    }
+
+
+    /*
+     * Formatting helpers
+     */
+
+    function formatSigned(value) {
+        return value >= 0 ? `+${value}` : `${value}`;
+    }
+
+
+    function formatSpeeds(animal) {
+        return animal.speeds
+            .map(speed =>
+                `${speed.geography} ${speed.range} ft`
+            )
+            .join(", ");
+    }
+
+
+    function formatFullAttack(animal) {
+        return animal.attacks.full_attack
+            .map(entry =>
+                `${entry.type} ×${entry.count}`
+            )
+            .join(", ");
+    }
+
+
+    function formatSpecialAttacks(animal) {
+        return animal.attacks.special_attacks
+            .map(entry => {
+
+                if (entry.count !== 1) {
+                    return `${entry.type} ×${entry.count}`;
+                }
+
+                return entry.type;
+            })
+            .join(", ");
+    }
+
+    function getFastestSpeed(animal) {
+        if (!animal.speeds || animal.speeds.length === 0) {
+            return null;
+        }
+
+        return animal.speeds.reduce((fastest, speed) => {
+            return speed.range > fastest.range ? speed : fastest;
+        });
+    }
+
+
+    function formatFastestSpeed(animal) {
+        const speed = getFastestSpeed(animal);
+
+        if (!speed) {
+            return "—";
+        }
+
+        return `${speed.geography} ${speed.range} ft`;
+    }
+
+    function formatNaturalAttacks(animal) {
+        return animal.attacks.natural_weapons
+            .map(weapon => {
+                const damage =
+                    `${weapon.dice_count}d${weapon.dice_sides}` +
+                    `${formatSigned(weapon.damage_bonus)}`;
+
+                return `${weapon.type} ${formatSigned(weapon.attack_bonus)} (${damage})`;
+            })
+            .join(", ");
+    }
+
+    function getDiceKey(weapon) {
+        return `${weapon.dice_count}d${weapon.dice_sides}`;
+    }
+
+    function getHighestDiceRank(animal) {
+        if (!animal.attacks.natural_weapons.length) {
+            return -1;
+        }
+
+        return Math.max(
+            ...animal.attacks.natural_weapons.map(weapon => {
+                return DICE_RANK.get(getDiceKey(weapon)) ?? -1;
+            })
+        );
+    }
+
+    function getHighestAttackBonus(animal) {
+        if (!animal.attacks.natural_weapons.length) {
+            return -Infinity;
+        }
+
+        return Math.max(
+            ...animal.attacks.natural_weapons.map(
+                weapon => weapon.attack_bonus
+            )
+        );
+    }
+
+    function getHighestDamageBonus(animal) {
+        if (!animal.attacks.natural_weapons.length) {
+            return -Infinity;
+        }
+
+        return Math.max(
+            ...animal.attacks.natural_weapons.map(
+                weapon => weapon.damage_bonus
+            )
+        );
+    }
+
+    /*
+     * Render table
+     */
+
+    function renderTable() {
+        const tbody = document.getElementById("animal-table");
+
+        tbody.innerHTML = "";
+
+        for (const animal of filteredAnimals) {
+
+            const row = document.createElement("tr");
+
+            row.className =
+                animal.allowed
+                    ? "allowed"
+                    : "not-allowed";
+
+            row.innerHTML = `
+                <td>${animal.name}</td>
+                <td>${animal.size}</td>
+                <td>${animal.armorclass}</td>
+                <td>${animal.reach} ft</td>
+                <td>${formatSigned(animal.grapple)}</td>
+
+                <td>${animal.ability_scores.strength}</td>
+                <td>${animal.ability_scores.dexterity}</td>
+                <td>${animal.ability_scores.constitution}</td>
+
+                <td>${formatSigned(animal.saves.fortitude)}</td>
+                <td>${formatSigned(animal.saves.reflex)}</td>
+                <td>${formatSigned(animal.saves.will)}</td>
+
+                <td>${formatFastestSpeed(animal)}</td>
+
+                <td>${formatNaturalAttacks(animal)}</td>
+                <td>${formatFullAttack(animal)}</td>
+                <td>${formatSpecialAttacks(animal)}</td>
+            `;
+
+            row.addEventListener("click", () => {
+                showDetails(animal);
+            });
+
+            tbody.appendChild(row);
+        }
+
+        document.getElementById("status").textContent =
+            `${filteredAnimals.length} / ${animals.length} forms`;
+    }
+
+
+    /*
+     * Detailed view
+     */
+
+    function showDetails(animal) {
+
+        const details = document.getElementById("details");
+
+        const naturalWeapons =
+            animal.attacks.natural_weapons
+                .map(weapon => `
+                    <div class="attack">
+                        <strong>${weapon.type}</strong>
+                        (${weapon.role})
+                        ${formatSigned(weapon.attack_bonus)}
+                        —
+                        ${weapon.dice_count}d${weapon.dice_sides}${formatSigned(weapon.damage_bonus)}
+                    </div>
+                `)
+                .join("");
+
+        const fullAttack =
+            formatFullAttack(animal);
+
+        const specialAttacks =
+            formatSpecialAttacks(animal) || "None";
+
+        details.innerHTML = `
+            <h2>${animal.name}</h2>
+
+            <div class="details-grid">
+
+                <div class="detail-group">
+                    <h3>Basic</h3>
+                    <div>Size: ${animal.size}</div>
+                    <div>HD: ${animal.hd}</div>
+                    <div>Type: ${animal.type}</div>
+                    <div>Allowed: ${animal.allowed}</div>
+                    <div>Init: ${formatSigned(animal.init)}</div>
+                    <div>BAB: ${formatSigned(animal.bab)}</div>
+                    <div>AC: ${animal.armorclass}</div>
+                    <div>Reach: ${animal.reach} ft</div>
+                    <div>Grapple: ${formatSigned(animal.grapple)}</div>
+                </div>
+
+                <div class="detail-group">
+                    <h3>Ability Scores</h3>
+                    <div>STR: ${animal.ability_scores.strength}</div>
+                    <div>DEX: ${animal.ability_scores.dexterity}</div>
+                    <div>CON: ${animal.ability_scores.constitution}</div>
+                    <div>INT: ${animal.ability_scores.intelligence}</div>
+                    <div>WIS: ${animal.ability_scores.wisdom}</div>
+                    <div>CHA: ${animal.ability_scores.charisma}</div>
+                </div>
+
+                <div class="detail-group">
+                    <h3>Saves</h3>
+                    <div>Fort: ${formatSigned(animal.saves.fortitude)}</div>
+                    <div>Ref: ${formatSigned(animal.saves.reflex)}</div>
+                    <div>Will: ${formatSigned(animal.saves.will)}</div>
+                </div>
+
+                <div class="detail-group">
+                    <h3>Speeds</h3>
+                    <div>${formatSpeeds(animal)}</div>
+                </div>
+
+                <div class="detail-group">
+                    <h3>Natural Weapons</h3>
+                    ${naturalWeapons || "<div>None</div>"}
+                </div>
+
+                <div class="detail-group">
+                    <h3>Full Attack</h3>
+                    <div>${fullAttack || "None"}</div>
+                </div>
+
+                <div class="detail-group">
+                    <h3>Special Attacks</h3>
+                    <div>${specialAttacks}</div>
+                </div>
+
+                <div class="detail-group">
+                    <h3>Notes</h3>
+                    <div>${animal.notes || "None"}</div>
+                </div>
+
+            </div>
+        `;
+
+        details.style.display = "block";
+    }
+
+
+    /*
+     * Events
+     */
+
+    document
+        .getElementById("search")
+        .addEventListener("input", applyFilters);
+
+    document
+        .getElementById("size-filter")
+        .addEventListener("change", applyFilters);
+
+    document
+        .getElementById("type-filter")
+        .addEventListener("change", applyFilters);
+
+    document
+        .getElementById("allowed-filter")
+        .addEventListener("change", applyFilters);
+
+
+    document
+        .querySelectorAll("th[data-sort]")
+        .forEach(header => {
+
+            header.addEventListener("click", () => {
+
+                const column = header.dataset.sort;
+
+                if (sortColumn === column) {
+                    sortAscending = !sortAscending;
+                } else {
+                    sortColumn = column;
+                    sortAscending = true;
+                }
+
+                sortAnimals();
+                renderTable();
+            });
+        });
+    
+    document
+        .querySelectorAll(".sort-button")
+        .forEach(button => {
+
+            button.addEventListener("click", event => {
+
+                event.stopPropagation();
+
+                const column = button.dataset.sort;
+
+                if (sortColumn === column) {
+                    sortAscending = !sortAscending;
+                } else {
+                    sortColumn = column;
+                    sortAscending = false;
+                }
+
+                sortAnimals();
+                renderTable();
+            });
+        });
+
+
+    /*
+     * Start
+     */
+
+    loadAnimals();
+</script>
+
+</body>
+</html>
+```

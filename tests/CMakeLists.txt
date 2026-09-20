@@ -10,6 +10,9 @@ list(REMOVE_ITEM PROJECT_SRC_FILES
     "${CMAKE_SOURCE_DIR}/src/main.cpp"
 )
 
+list(FILTER PROJECT_SRC_FILES EXCLUDE REGEX "/mjson/test/")
+
+
 # Usage: add_unit_test(name src1 [src2 ...])
 function(add_unit_test test_name)
     add_executable(${test_name} ${ARGN} ${PROJECT_SRC_FILES})

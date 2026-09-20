@@ -1,8 +1,8 @@
 #ifndef SPECS_H
 #define SPECS_H
 
-#include "attacks.h"
-#include "movement.h"
+#include "specs/attacks.h"
+#include "specs/movement.h"
 
 #include <stdbool.h>
 

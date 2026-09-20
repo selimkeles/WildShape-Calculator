@@ -1,0 +1,3011 @@
+{
+  "animals": [{
+      "name": "Ape",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 4,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 14,
+      "reach": 10,
+      "grapple": 16,
+      "ability_scores": {
+        "strength": 21,
+        "dexterity": 15,
+        "constitution": 14,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 14,
+        "reflex": 10,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 30
+        },
+        {
+          "geography": "Climb",
+          "range": 30
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Claw",
+            "role": "Primary",
+            "attack_bonus": 11,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 5
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 6,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 2
+          }
+        ],
+        "full_attack": [{
+            "type": "Claw",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Bear Brown",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 6,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 19,
+      "ability_scores": {
+        "strength": 27,
+        "dexterity": 13,
+        "constitution": 19,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 16,
+        "reflex": 9,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 30
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Claw",
+            "role": "Primary",
+            "attack_bonus": 14,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 8
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 9,
+            "dice_count": 2,
+            "dice_sides": 6,
+            "damage_bonus": 4
+          }
+        ],
+        "full_attack": [{
+            "type": "Claw",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": [{
+            "type": "Improved Grab",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bear Polar",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 8,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 19,
+      "ability_scores": {
+        "strength": 27,
+        "dexterity": 13,
+        "constitution": 19,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 16,
+        "reflex": 9,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        },
+        {
+          "geography": "Swim",
+          "range": 30
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Claw",
+            "role": "Primary",
+            "attack_bonus": 14,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 8
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 9,
+            "dice_count": 2,
+            "dice_sides": 6,
+            "damage_bonus": 4
+          }
+        ],
+        "full_attack": [{
+            "type": "Claw",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": [{
+            "type": "Improved Grab",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bison",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 5,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 13,
+      "reach": 5,
+      "grapple": 17,
+      "ability_scores": {
+        "strength": 22,
+        "dexterity": 10,
+        "constitution": 16,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 15,
+        "reflex": 8,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Gore",
+            "role": "Primary",
+            "attack_bonus": 12,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 6
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Camel",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 13,
+      "reach": 5,
+      "grapple": 15,
+      "ability_scores": {
+        "strength": 18,
+        "dexterity": 16,
+        "constitution": 14,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 14,
+        "reflex": 11,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 50
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 10,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": 4
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Dire Ape",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 5,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 10,
+      "grapple": 17,
+      "ability_scores": {
+        "strength": 22,
+        "dexterity": 15,
+        "constitution": 14,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 14,
+        "reflex": 10,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 30
+        },
+        {
+          "geography": "Climb",
+          "range": 15
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Claw",
+            "role": "Primary",
+            "attack_bonus": 12,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 6
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 7,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 3
+          },
+          {
+            "type": "Rend",
+            "role": "Special",
+            "attack_bonus": 12,
+            "dice_count": 2,
+            "dice_sides": 6,
+            "damage_bonus": 6
+          }
+        ],
+        "full_attack": [{
+            "type": "Claw",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": [{
+            "type": "Rend",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dire Bat",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 4,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 20,
+      "reach": 5,
+      "grapple": 14,
+      "ability_scores": {
+        "strength": 17,
+        "dexterity": 22,
+        "constitution": 17,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 15,
+        "reflex": 14,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 20
+        },
+        {
+          "geography": "Fly (Good)",
+          "range": 40
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 9,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 3
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Dire Bear",
+      "size": "Large",
+      "allowed": false,
+      "notes": "",
+      "hd": 12,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 17,
+      "reach": 5,
+      "grapple": 21,
+      "ability_scores": {
+        "strength": 31,
+        "dexterity": 13,
+        "constitution": 19,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 16,
+        "reflex": 9,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Claw",
+            "role": "Primary",
+            "attack_bonus": 16,
+            "dice_count": 2,
+            "dice_sides": 4,
+            "damage_bonus": 10
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 11,
+            "dice_count": 2,
+            "dice_sides": 8,
+            "damage_bonus": 5
+          }
+        ],
+        "full_attack": [{
+            "type": "Claw",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": [{
+            "type": "Improved Grab",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dire Boar",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 7,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 19,
+      "ability_scores": {
+        "strength": 27,
+        "dexterity": 10,
+        "constitution": 17,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 15,
+        "reflex": 8,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Gore",
+            "role": "Primary",
+            "attack_bonus": 14,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 8
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": [{
+            "type": "Ferocity",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dire Lion",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 8,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 18,
+      "ability_scores": {
+        "strength": 25,
+        "dexterity": 15,
+        "constitution": 17,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 15,
+        "reflex": 10,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Claw",
+            "role": "Primary",
+            "attack_bonus": 13,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 7
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 8,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 3
+          },
+          {
+            "type": "Rake",
+            "role": "Special",
+            "attack_bonus": 13,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 7
+          }
+        ],
+        "full_attack": [{
+            "type": "Claw",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": [{
+            "type": "Improved Grab",
+            "count": 1
+          },
+          {
+            "type": "Pounce",
+            "count": 1
+          },
+          {
+            "type": "Rake",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dire Tiger",
+      "size": "Large",
+      "allowed": false,
+      "notes": "",
+      "hd": 16,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 17,
+      "reach": 5,
+      "grapple": 19,
+      "ability_scores": {
+        "strength": 27,
+        "dexterity": 15,
+        "constitution": 17,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 15,
+        "reflex": 10,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Claw",
+            "role": "Primary",
+            "attack_bonus": 14,
+            "dice_count": 2,
+            "dice_sides": 4,
+            "damage_bonus": 8
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 9,
+            "dice_count": 2,
+            "dice_sides": 6,
+            "damage_bonus": 4
+          },
+          {
+            "type": "Rake",
+            "role": "Special",
+            "attack_bonus": 14,
+            "dice_count": 2,
+            "dice_sides": 4,
+            "damage_bonus": 8
+          }
+        ],
+        "full_attack": [{
+            "type": "Claw",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": [{
+            "type": "Improved Grab",
+            "count": 1
+          },
+          {
+            "type": "Pounce",
+            "count": 1
+          },
+          {
+            "type": "Rake",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dire Wolf",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 6,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 14,
+      "reach": 5,
+      "grapple": 18,
+      "ability_scores": {
+        "strength": 25,
+        "dexterity": 15,
+        "constitution": 17,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 15,
+        "reflex": 10,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 50
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 13,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 7
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": [{
+            "type": "Trip",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dire Wolverine",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 5,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 16,
+      "reach": 5,
+      "grapple": 17,
+      "ability_scores": {
+        "strength": 22,
+        "dexterity": 17,
+        "constitution": 19,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 16,
+        "reflex": 11,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 30
+        },
+        {
+          "geography": "Burrow",
+          "range": 10
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Claw",
+            "role": "Primary",
+            "attack_bonus": 12,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 6
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 7,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 3
+          }
+        ],
+        "full_attack": [{
+            "type": "Claw",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": [{
+            "type": "Rage",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Horse Heavy",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 13,
+      "reach": 5,
+      "grapple": 14,
+      "ability_scores": {
+        "strength": 16,
+        "dexterity": 13,
+        "constitution": 15,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 14,
+        "reflex": 9,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 50
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Hoof",
+            "role": "Primary",
+            "attack_bonus": 9,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 3
+          }
+        ],
+        "full_attack": [{
+            "type": "Hoof",
+            "count": 2
+          }
+        ],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Horse Light",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 13,
+      "reach": 5,
+      "grapple": 13,
+      "ability_scores": {
+        "strength": 14,
+        "dexterity": 13,
+        "constitution": 15,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 14,
+        "reflex": 9,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 60
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Hoof",
+            "role": "Primary",
+            "attack_bonus": 8,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": 2
+          }
+        ],
+        "full_attack": [{
+            "type": "Hoof",
+            "count": 2
+          }
+        ],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Lion",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 5,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 16,
+      "ability_scores": {
+        "strength": 21,
+        "dexterity": 17,
+        "constitution": 15,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 14,
+        "reflex": 11,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Claw",
+            "role": "Primary",
+            "attack_bonus": 11,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": 5
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 6,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 2
+          },
+          {
+            "type": "Rake",
+            "role": "Special",
+            "attack_bonus": 11,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": 5
+          }
+        ],
+        "full_attack": [{
+            "type": "Claw",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": [{
+            "type": "Pounce",
+            "count": 1
+          },
+          {
+            "type": "Improved Grab",
+            "count": 1
+          },
+          {
+            "type": "Rake",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "Manta Ray",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 4,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 12,
+      "reach": 5,
+      "grapple": 13,
+      "ability_scores": {
+        "strength": 15,
+        "dexterity": 11,
+        "constitution": 10,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 12,
+        "reflex": 8,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Swim",
+          "range": 30
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Ram",
+            "role": "Primary",
+            "attack_bonus": 8,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 2
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Mule",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 13,
+      "reach": 5,
+      "grapple": 14,
+      "ability_scores": {
+        "strength": 16,
+        "dexterity": 13,
+        "constitution": 17,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 15,
+        "reflex": 9,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 30
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Hoof",
+            "role": "Primary",
+            "attack_bonus": 9,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": 3
+          }
+        ],
+        "full_attack": [{
+            "type": "Hoof",
+            "count": 2
+          }
+        ],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Octopus, Giant",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 8,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 18,
+      "reach": 10,
+      "grapple": 16,
+      "ability_scores": {
+        "strength": 20,
+        "dexterity": 15,
+        "constitution": 13,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 13,
+        "reflex": 10,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 20
+        },
+        {
+          "geography": "Swim",
+          "range": 40
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Tentacle",
+            "role": "Primary",
+            "attack_bonus": 11,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": 5
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 6,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 2
+          },
+          {
+            "type": "Constrict",
+            "role": "Special",
+            "attack_bonus": 0,
+            "dice_count": 2,
+            "dice_sides": 8,
+            "damage_bonus": 6
+          }
+        ],
+        "full_attack": [{
+            "type": "Tentacle",
+            "count": 8
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": [{
+            "type": "Improved Grab",
+            "count": 1
+          },
+          {
+            "type": "Constrict",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rhinoceros",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 8,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 16,
+      "reach": 5,
+      "grapple": 19,
+      "ability_scores": {
+        "strength": 26,
+        "dexterity": 10,
+        "constitution": 21,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 17,
+        "reflex": 8,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 30
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Gore",
+            "role": "Primary",
+            "attack_bonus": 14,
+            "dice_count": 2,
+            "dice_sides": 6,
+            "damage_bonus": 8
+          },
+          {
+            "type": "Powerful Charge",
+            "role": "Special",
+            "attack_bonus": 14,
+            "dice_count": 4,
+            "dice_sides": 6,
+            "damage_bonus": 8
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": [{
+            "type": "Powerful Charge",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shark, Large",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 7,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 14,
+      "ability_scores": {
+        "strength": 17,
+        "dexterity": 15,
+        "constitution": 13,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 13,
+        "reflex": 10,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Swim",
+          "range": 60
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 9,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 3
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Viper, Large",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 11,
+      "ability_scores": {
+        "strength": 10,
+        "dexterity": 17,
+        "constitution": 11,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 12,
+        "reflex": 11,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 20
+        },
+        {
+          "geography": "Swim",
+          "range": 20
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 6,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": 0
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": [{
+            "type": "Poison",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tiger",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 6,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 14,
+      "reach": 5,
+      "grapple": 17,
+      "ability_scores": {
+        "strength": 23,
+        "dexterity": 15,
+        "constitution": 17,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 15,
+        "reflex": 10,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Claw",
+            "role": "Primary",
+            "attack_bonus": 12,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 6
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 7,
+            "dice_count": 2,
+            "dice_sides": 6,
+            "damage_bonus": 3
+          },
+          {
+            "type": "Rake",
+            "role": "Special",
+            "attack_bonus": 12,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 6
+          }
+        ],
+        "full_attack": [{
+            "type": "Claw",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": [{
+            "type": "Improved Grab",
+            "count": 1
+          },
+          {
+            "type": "Pounce",
+            "count": 1
+          },
+          {
+            "type": "Rake",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "Warhorse Heavy",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 4,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 14,
+      "reach": 5,
+      "grapple": 15,
+      "ability_scores": {
+        "strength": 18,
+        "dexterity": 13,
+        "constitution": 17,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 15,
+        "reflex": 9,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 50
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Hoof",
+            "role": "Primary",
+            "attack_bonus": 10,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 4
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 5,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": 2
+          }
+        ],
+        "full_attack": [{
+            "type": "Hoof",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Warhorse Light",
+      "size": "Large",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 14,
+      "reach": 5,
+      "grapple": 14,
+      "ability_scores": {
+        "strength": 16,
+        "dexterity": 13,
+        "constitution": 17,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 15,
+        "reflex": 9,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 60
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Hoof",
+            "role": "Primary",
+            "attack_bonus": 9,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": 3
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 4,
+            "dice_count": 1,
+            "dice_sides": 3,
+            "damage_bonus": 1
+          }
+        ],
+        "full_attack": [{
+            "type": "Hoof",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Baboon",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 1,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 13,
+      "reach": 5,
+      "grapple": 9,
+      "ability_scores": {
+        "strength": 15,
+        "dexterity": 14,
+        "constitution": 12,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 13,
+        "reflex": 10,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        },
+        {
+          "geography": "Climb",
+          "range": 30
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 9,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 2
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Bear, Black",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 13,
+      "reach": 5,
+      "grapple": 11,
+      "ability_scores": {
+        "strength": 19,
+        "dexterity": 13,
+        "constitution": 15,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 14,
+        "reflex": 9,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Claw",
+            "role": "Primary",
+            "attack_bonus": 11,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": 4
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 6,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 2
+          }
+        ],
+        "full_attack": [{
+            "type": "Claw",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Boar",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 16,
+      "reach": 5,
+      "grapple": 9,
+      "ability_scores": {
+        "strength": 15,
+        "dexterity": 10,
+        "constitution": 17,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 15,
+        "reflex": 8,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Gore",
+            "role": "Primary",
+            "attack_bonus": 9,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 2
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": [{
+            "type": "Ferocity",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cheetah",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 10,
+      "ability_scores": {
+        "strength": 16,
+        "dexterity": 19,
+        "constitution": 15,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 14,
+        "reflex": 12,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 50
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 10,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 3
+          },
+          {
+            "type": "Claw",
+            "role": "Secondary",
+            "attack_bonus": 5,
+            "dice_count": 1,
+            "dice_sides": 2,
+            "damage_bonus": 1
+          }
+        ],
+        "full_attack": [{
+            "type": "Bite",
+            "count": 1
+          },
+          {
+            "type": "Claw",
+            "count": 2
+          }
+        ],
+        "special_attacks": [{
+            "type": "Trip",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Crocodile",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 11,
+      "ability_scores": {
+        "strength": 19,
+        "dexterity": 12,
+        "constitution": 17,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 15,
+        "reflex": 9,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 20
+        },
+        {
+          "geography": "Swim",
+          "range": 30
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 11,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 4
+          },
+          {
+            "type": "Tail Slap",
+            "role": "Primary",
+            "attack_bonus": 11,
+            "dice_count": 1,
+            "dice_sides": 12,
+            "damage_bonus": 4
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": [{
+            "type": "Improved Grab",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dog, Riding",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 2,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 16,
+      "reach": 5,
+      "grapple": 9,
+      "ability_scores": {
+        "strength": 15,
+        "dexterity": 15,
+        "constitution": 15,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 14,
+        "reflex": 10,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 9,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 2
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Donkey",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 2,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 13,
+      "reach": 5,
+      "grapple": 7,
+      "ability_scores": {
+        "strength": 10,
+        "dexterity": 13,
+        "constitution": 12,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 13,
+        "reflex": 9,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 30
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 7,
+            "dice_count": 1,
+            "dice_sides": 2,
+            "damage_bonus": 0
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Hyena",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 2,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 14,
+      "reach": 5,
+      "grapple": 9,
+      "ability_scores": {
+        "strength": 14,
+        "dexterity": 15,
+        "constitution": 15,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 14,
+        "reflex": 10,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 50
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 9,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 2
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": [{
+            "type": "Trip",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Leopard",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 10,
+      "ability_scores": {
+        "strength": 16,
+        "dexterity": 19,
+        "constitution": 15,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 14,
+        "reflex": 12,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        },
+        {
+          "geography": "Climb",
+          "range": 20
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 10,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 3
+          },
+          {
+            "type": "Claw",
+            "role": "Secondary",
+            "attack_bonus": 5,
+            "dice_count": 1,
+            "dice_sides": 3,
+            "damage_bonus": 1
+          },
+          {
+            "type": "Rake",
+            "role": "Special",
+            "attack_bonus": 10,
+            "dice_count": 1,
+            "dice_sides": 3,
+            "damage_bonus": 3
+          }
+        ],
+        "full_attack": [{
+            "type": "Bite",
+            "count": 1
+          },
+          {
+            "type": "Claw",
+            "count": 2
+          }
+        ],
+        "special_attacks": [{
+            "type": "Improved Grab",
+            "count": 1
+          },
+          {
+            "type": "Pounce",
+            "count": 1
+          },
+          {
+            "type": "Rake",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lizard, Monitor",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 10,
+      "ability_scores": {
+        "strength": 17,
+        "dexterity": 15,
+        "constitution": 17,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 15,
+        "reflex": 10,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 30
+        },
+        {
+          "geography": "Swim",
+          "range": 30
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 10,
+            "dice_count": 1,
+            "dice_sides": 8,
+            "damage_bonus": 3
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Pony",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 2,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 13,
+      "reach": 5,
+      "grapple": 8,
+      "ability_scores": {
+        "strength": 13,
+        "dexterity": 13,
+        "constitution": 12,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 13,
+        "reflex": 9,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Hoof",
+            "role": "Primary",
+            "attack_bonus": 8,
+            "dice_count": 1,
+            "dice_sides": 3,
+            "damage_bonus": 1
+          }
+        ],
+        "full_attack": [{
+            "type": "Hoof",
+            "count": 2
+          }
+        ],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Pony, War",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 2,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 13,
+      "reach": 5,
+      "grapple": 9,
+      "ability_scores": {
+        "strength": 15,
+        "dexterity": 13,
+        "constitution": 14,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 14,
+        "reflex": 9,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Hoof",
+            "role": "Primary",
+            "attack_bonus": 9,
+            "dice_count": 1,
+            "dice_sides": 3,
+            "damage_bonus": 2
+          }
+        ],
+        "full_attack": [{
+            "type": "Hoof",
+            "count": 2
+          }
+        ],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Porpoise",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 2,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 7,
+      "ability_scores": {
+        "strength": 11,
+        "dexterity": 17,
+        "constitution": 13,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 13,
+        "reflex": 11,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Swim",
+          "range": 80
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Slam",
+            "role": "Primary",
+            "attack_bonus": 7,
+            "dice_count": 2,
+            "dice_sides": 4,
+            "damage_bonus": 0
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Shark, Medium",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 8,
+      "ability_scores": {
+        "strength": 13,
+        "dexterity": 15,
+        "constitution": 13,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 13,
+        "reflex": 10,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Swim",
+          "range": 60
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 8,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 1
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Constrictor Snake",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 10,
+      "ability_scores": {
+        "strength": 17,
+        "dexterity": 17,
+        "constitution": 13,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 13,
+        "reflex": 11,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 20
+        },
+        {
+          "geography": "Climb",
+          "range": 20
+        },
+        {
+          "geography": "Swim",
+          "range": 20
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 10,
+            "dice_count": 1,
+            "dice_sides": 3,
+            "damage_bonus": 3
+          },
+          {
+            "type": "Constrict",
+            "role": "Special",
+            "attack_bonus": 0,
+            "dice_count": 1,
+            "dice_sides": 3,
+            "damage_bonus": 4
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": [{
+            "type": "Constrict",
+            "count": 1
+          },
+          {
+            "type": "Improved Grab",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Snake, Medium Viper",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 2,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 16,
+      "reach": 5,
+      "grapple": 6,
+      "ability_scores": {
+        "strength": 8,
+        "dexterity": 17,
+        "constitution": 11,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 12,
+        "reflex": 11,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 20
+        },
+        {
+          "geography": "Climb",
+          "range": 20
+        },
+        {
+          "geography": "Swim",
+          "range": 20
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 6,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": -1
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": [{
+            "type": "Poison",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Squid",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 16,
+      "reach": 5,
+      "grapple": 9,
+      "ability_scores": {
+        "strength": 14,
+        "dexterity": 17,
+        "constitution": 11,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 12,
+        "reflex": 11,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Swim",
+          "range": 60
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Arms",
+            "role": "Primary",
+            "attack_bonus": 9,
+            "dice_count": 0,
+            "dice_sides": 0,
+            "damage_bonus": 2
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 4,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 1
+          }
+        ],
+        "full_attack": [{
+            "type": "Arms",
+            "count": 1
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": [{
+            "type": "Improved Grab",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wolf",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 2,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 14,
+      "reach": 5,
+      "grapple": 8,
+      "ability_scores": {
+        "strength": 13,
+        "dexterity": 15,
+        "constitution": 15,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 14,
+        "reflex": 10,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 50
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 8,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 1
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": [{
+            "type": "Trip",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wolverine",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 14,
+      "reach": 5,
+      "grapple": 9,
+      "ability_scores": {
+        "strength": 14,
+        "dexterity": 15,
+        "constitution": 19,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 16,
+        "reflex": 10,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 30
+        },
+        {
+          "geography": "Burrow",
+          "range": 10
+        },
+        {
+          "geography": "Climb",
+          "range": 10
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Claw",
+            "role": "Primary",
+            "attack_bonus": 9,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": 2
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 4,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 1
+          }
+        ],
+        "full_attack": [{
+            "type": "Claw",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": [{
+            "type": "Rage",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dire Badger",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 16,
+      "reach": 5,
+      "grapple": 9,
+      "ability_scores": {
+        "strength": 14,
+        "dexterity": 17,
+        "constitution": 19,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 16,
+        "reflex": 11,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 30
+        },
+        {
+          "geography": "Burrow",
+          "range": 10
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Claw",
+            "role": "Primary",
+            "attack_bonus": 9,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": 2
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 4,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 1
+          }
+        ],
+        "full_attack": [{
+            "type": "Claw",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": [{
+            "type": "Rage",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dire Weasel",
+      "size": "Medium",
+      "allowed": true,
+      "notes": "",
+      "hd": 3,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 16,
+      "reach": 5,
+      "grapple": 9,
+      "ability_scores": {
+        "strength": 14,
+        "dexterity": 19,
+        "constitution": 10,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 12,
+        "reflex": 12,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 9,
+            "dice_count": 1,
+            "dice_sides": 6,
+            "damage_bonus": 2
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": [{
+            "type": "Attach",
+            "count": 1
+          },
+          {
+            "type": "Blood Drain",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Badger",
+      "size": "Small",
+      "allowed": true,
+      "notes": "",
+      "hd": 1,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 2,
+      "ability_scores": {
+        "strength": 8,
+        "dexterity": 17,
+        "constitution": 15,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 14,
+        "reflex": 11,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 30
+        },
+        {
+          "geography": "Burrow",
+          "range": 10
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Claw",
+            "role": "Primary",
+            "attack_bonus": 7,
+            "dice_count": 1,
+            "dice_sides": 2,
+            "damage_bonus": -1
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 2,
+            "dice_count": 1,
+            "dice_sides": 3,
+            "damage_bonus": 0
+          }
+        ],
+        "full_attack": [{
+            "type": "Claw",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": [{
+            "type": "Rage",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dog",
+      "size": "Small",
+      "allowed": true,
+      "notes": "",
+      "hd": 1,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 4,
+      "ability_scores": {
+        "strength": 13,
+        "dexterity": 17,
+        "constitution": 15,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 14,
+        "reflex": 11,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 9,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": 1
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Eagle",
+      "size": "Small",
+      "allowed": true,
+      "notes": "",
+      "hd": 1,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 14,
+      "reach": 5,
+      "grapple": 3,
+      "ability_scores": {
+        "strength": 10,
+        "dexterity": 15,
+        "constitution": 12,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 13,
+        "reflex": 10,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 10
+        },
+        {
+          "geography": "Fly (Average)",
+          "range": 80
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Talon",
+            "role": "Primary",
+            "attack_bonus": 8,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": 0
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 3,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": 0
+          }
+        ],
+        "full_attack": [{
+            "type": "Talon",
+            "count": 2
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": []
+      }
+    },
+    {
+      "name": "Octopus",
+      "size": "Small",
+      "allowed": true,
+      "notes": "",
+      "hd": 2,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 16,
+      "reach": 5,
+      "grapple": 4,
+      "ability_scores": {
+        "strength": 12,
+        "dexterity": 17,
+        "constitution": 11,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 12,
+        "reflex": 11,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 20
+        },
+        {
+          "geography": "Swim",
+          "range": 30
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Arms",
+            "role": "Primary",
+            "attack_bonus": 9,
+            "dice_count": 0,
+            "dice_sides": 0,
+            "damage_bonus": 1
+          },
+          {
+            "type": "Bite",
+            "role": "Secondary",
+            "attack_bonus": 4,
+            "dice_count": 1,
+            "dice_sides": 3,
+            "damage_bonus": 0
+          }
+        ],
+        "full_attack": [{
+            "type": "Arms",
+            "count": 1
+          },
+          {
+            "type": "Bite",
+            "count": 1
+          }
+        ],
+        "special_attacks": [{
+            "type": "Improved Grab",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Snake, Small Viper",
+      "size": "Small",
+      "allowed": true,
+      "notes": "",
+      "hd": 1,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 17,
+      "reach": 5,
+      "grapple": 1,
+      "ability_scores": {
+        "strength": 6,
+        "dexterity": 17,
+        "constitution": 11,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 12,
+        "reflex": 11,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 20
+        },
+        {
+          "geography": "Climb",
+          "range": 20
+        },
+        {
+          "geography": "Swim",
+          "range": 20
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 6,
+            "dice_count": 1,
+            "dice_sides": 2,
+            "damage_bonus": -2
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": [{
+            "type": "Poison",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dire Rat",
+      "size": "Small",
+      "allowed": true,
+      "notes": "",
+      "hd": 1,
+      "type": "Animal",
+      "init": 0,
+      "bab": 7,
+      "armorclass": 15,
+      "reach": 5,
+      "grapple": 3,
+      "ability_scores": {
+        "strength": 10,
+        "dexterity": 17,
+        "constitution": 12,
+        "intelligence": 14,
+        "wisdom": 20,
+        "charisma": 14
+      },
+      "saves": {
+        "fortitude": 13,
+        "reflex": 11,
+        "will": 17
+      },
+      "speeds": [{
+          "geography": "Land",
+          "range": 40
+        },
+        {
+          "geography": "Climb",
+          "range": 20
+        }
+      ],
+      "attacks": {
+        "natural_weapons": [{
+            "type": "Bite",
+            "role": "Primary",
+            "attack_bonus": 8,
+            "dice_count": 1,
+            "dice_sides": 4,
+            "damage_bonus": 0
+          }
+        ],
+        "full_attack": [],
+        "special_attacks": [{
+            "type": "Disease",
+            "count": 1
+          }
+        ]
+      }
+    }
+  ]
+}

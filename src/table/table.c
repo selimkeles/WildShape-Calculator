@@ -28,6 +28,24 @@ static void print_section_separator(void)
     printf("+----------------------+-------------------------------------+\n");
 }
 
+const char *monster_type_to_string(monster_type_t type)
+{
+    switch (type)
+    {
+        case TYPE_ANIMAL:
+            return "Animal";
+
+        case TYPE_PLANT:
+            return "Plant";
+
+        case TYPE_ELEMENTAL:
+            return "Elemental";
+
+        default:
+            return "Unknown";
+    }
+}
+
 const char *animal_size_to_string(animal_size_t size)
 {
     switch (size)
@@ -133,6 +151,27 @@ const char *natural_weapon_type_to_string(natural_weapon_type_t type)
 
         case NW_ARMS:
             return "Arms";
+
+        default:
+            return "Unknown";
+    }
+}
+
+const char *natural_attack_role_to_string(natural_attack_role_t role)
+{
+    switch (role)
+    {
+        case NAR_NONE:
+            return "None";
+
+        case NAR_PRIMARY:
+            return "Primary";
+
+        case NAR_SECONDARY:
+            return "Secondary";
+
+        case NAR_SPECIAL:
+            return "Special";
 
         default:
             return "Unknown";
