@@ -16,8 +16,12 @@ typedef enum
     NW_BITE,
     NW_GORE,
     NW_TENTACLE,
+    NW_HOOF,
+    NW_RAM,
     NW_RAKE,
-    NW_CONSTRICT
+    NW_CONSTRICT,
+    NW_REND,
+    NW_POWERFULL_CHARGE
 } natural_weapon_type_t;
 
 typedef enum
@@ -30,6 +34,10 @@ typedef enum
     SA_TRIP,
     SA_CONSTRICT,
     SA_POISON,
+    SA_REND,
+    SA_FEROCITY,
+    SA_RAGE,
+    SA_POWERFUL_CHARGE
     // ...
 } special_attack_type_t;
 

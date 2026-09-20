@@ -110,6 +110,18 @@ const char *natural_weapon_type_to_string(natural_weapon_type_t type)
         case NW_CONSTRICT:
             return "Constrict";
 
+        case NW_HOOF:
+            return "Hoof";
+
+        case NW_RAM:
+            return "Ram";
+
+        case NW_REND:
+            return "Rend";
+
+        case NW_POWERFULL_CHARGE:
+            return "Powerful Charge";
+
         default:
             return "Unknown";
     }
@@ -142,6 +154,18 @@ const char *special_attack_type_to_string(special_attack_type_t type)
 
         case SA_POISON:
             return "Poison";
+
+        case SA_REND:
+            return "Rend";
+
+        case SA_FEROCITY:
+            return "Ferocity";
+
+        case SA_RAGE:
+            return "Rage";
+
+        case SA_POWERFUL_CHARGE:
+            return "Powerful Charge";
 
         default:
             return "Unknown";
