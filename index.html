@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,16 +11,44 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --parchment: #e0d0bb;
+            --parchment-light: #f7eee3;
+
+            --brown-dark: #5c4633;
+            --brown: #8c7054;
+            --brown-light: #a68563;
+            --brown-border: #80664c;
+
+            --text: #222;
+            --link: #102f78;
+
+            --white: #fff;
+        }
+
         body {
             font-family: system-ui, sans-serif;
             margin: 0;
             padding: 24px;
-            background: #f5f5f5;
-            color: #222;
+            color: var(--text);
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(255, 255, 255, 0.15),
+                    transparent 40%
+                ),
+                radial-gradient(
+                    circle at 80% 70%,
+                    rgba(90, 60, 35, 0.08),
+                    transparent 45%
+                ),
+                var(--parchment);
+            min-height: 100vh;
         }
 
         h1 {
             margin-top: 0;
+            color: var(--brown-dark);
         }
 
         .controls {
@@ -36,6 +63,9 @@
         button {
             font: inherit;
             padding: 8px 10px;
+            background: var(--parchment-light);
+            border: 1px solid var(--brown-border);
+            color: var(--text);
         }
 
         input {
@@ -44,8 +74,9 @@
 
         .table-container {
             overflow-x: auto;
-            background: white;
-            border: 1px solid #ccc;
+            background: var(--parchment-light);
+            border: 1px solid var(--brown-border);
+            box-shadow: 0 2px 8px rgba(70, 45, 25, 0.15);
         }
 
         table {
@@ -57,24 +88,33 @@
         th,
         td {
             padding: 8px 10px;
-            border-bottom: 1px solid #ddd;
+            border: 1px solid var(--brown-border);
             text-align: left;
         }
 
         th {
             position: sticky;
             top: 0;
-            background: #eee;
+            background: var(--brown-light);
+            color: white;
             cursor: pointer;
             user-select: none;
+        }
+
+        td {
+            background: var(--parchment-light);
         }
 
         tbody tr {
             cursor: pointer;
         }
 
-        tbody tr:hover {
-            background: #f0f0f0;
+        tbody tr:nth-child(even) td {
+            background: #ead9c4;
+        }
+
+        tbody tr:hover td {
+            background: #dfc5a6;
         }
 
         .allowed {
@@ -85,27 +125,130 @@
             opacity: 0.45;
         }
 
+        a {
+            color: var(--link);
+        }
+
         .details {
-            margin-top: 20px;
-            padding: 20px;
-            background: white;
-            border: 1px solid #ccc;
-            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+
+            width: min(450px, 90vw);
+            height: 100vh;
+
+            padding: 24px;
+
+            background: #f5eadc;
+            color: var(--text);
+            border-left: 1px solid var(--brown-border);
+
+            box-shadow: -4px 0 16px rgba(70, 45, 25, 0.25);
+
+            overflow-y: auto;
+
+            transform: translateX(100%);
+            transition: transform 0.2s ease;
+
+            z-index: 1000;
         }
 
-        .details-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 10px;
+        .details.open {
+            transform: translateX(0);
         }
 
-        .detail-group {
-            padding: 10px;
-            background: #f5f5f5;
+        .close-details {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+
+            border: none;
+            background: transparent;
+
+            font-size: 28px;
+            cursor: pointer;
+
+            color: var(--brown-dark);
         }
 
-        .detail-group h3 {
+        .close-details:hover {
+            color: var(--text);
+        }
+
+        .details h2 {
+            color: var(--brown-dark);
+            border-bottom: 2px solid var(--brown);
+            padding-bottom: 8px;
             margin-top: 0;
+        }
+
+        .detail-section {
+            margin-top: 24px;
+        }
+
+        .detail-section h3 {
+            margin: 0 0 8px;
+            color: white;
+            background: var(--brown);
+            padding: 5px 8px;
+            border: 1px solid var(--brown-border);
+            font-size: 1rem;
+        }
+
+        .stat-table,
+        .basic-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .stat-table th,
+        .stat-table td {
+            text-align: center;
+            padding: 6px 4px;
+        }
+
+        .stat-table th {
+            background: var(--brown-light);
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .stat-table td {
+            background: #f8eee2;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .basic-table th,
+        .basic-table td {
+            padding: 6px 4px;
+            border-bottom: 1px solid var(--brown-border);
+        }
+
+        .basic-table th {
+            width: 40%;
+            text-align: left;
+            font-weight: 600;
+            background: #dfcbb4;
+            color: var(--brown-dark);
+        }
+
+        .basic-table td {
+            text-align: right;
+            background: #f8eee2;
+        }
+
+        .attack-list {
+            line-height: 1.7;
+        }
+
+        .notes {
+            line-height: 1.5;
+        }
+
+        .notes h5 {
+            margin: 16px 0 6px;
         }
 
         .attack {
@@ -114,7 +257,22 @@
 
         #status {
             margin-bottom: 10px;
-            color: #666;
+            color: var(--brown-dark);
+            font-weight: 600;
+        }
+
+        .sort-button {
+            background: var(--brown-dark);
+            color: white;
+            border: 1px solid var(--brown-border);
+            padding: 2px 6px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            margin-left: 4px;
+        }
+        
+        .sort-button:hover {
+            background: var(--brown);
         }
     </style>
 </head>
@@ -169,15 +327,9 @@
 
                 <th>
                     Natural Attacks
-                    <button class="sort-button" data-sort="attack_bonus">
-                        AB
-                    </button>
-                    <button class="sort-button" data-sort="damage_bonus">
-                        DMG
-                    </button>
-                    <button class="sort-button" data-sort="dice">
-                        DICE
-                    </button>
+                    <button class="sort-button" data-sort="attack_bonus">AB</button>
+                    <button class="sort-button" data-sort="damage_bonus">DMG</button>
+                    <button class="sort-button" data-sort="dice">DICE</button>
                 </th>
 
                 <th>Full Attack</th>
@@ -580,6 +732,12 @@
      * Detailed view
      */
 
+    function closeDetails() {
+        document
+            .getElementById("details")
+            .classList.remove("open");
+    }
+
     function showDetails(animal) {
 
         const details = document.getElementById("details");
@@ -604,71 +762,143 @@
             formatSpecialAttacks(animal) || "None";
 
         details.innerHTML = `
+            <button class="close-details" onclick="closeDetails()">×</button>
+
             <h2>${animal.name}</h2>
 
-            <div class="details-grid">
+            <!-- Ability Scores -->
 
-                <div class="detail-group">
-                    <h3>Basic</h3>
-                    <div>Size: ${animal.size}</div>
-                    <div>HD: ${animal.hd}</div>
-                    <div>Type: ${animal.type}</div>
-                    <div>Allowed: ${animal.allowed}</div>
-                    <div>Init: ${formatSigned(animal.init)}</div>
-                    <div>BAB: ${formatSigned(animal.bab)}</div>
-                    <div>AC: ${animal.armorclass}</div>
-                    <div>Reach: ${animal.reach} ft</div>
-                    <div>Grapple: ${formatSigned(animal.grapple)}</div>
-                </div>
+            <div class="detail-section">
+                <h3>Ability Scores</h3>
 
-                <div class="detail-group">
-                    <h3>Ability Scores</h3>
-                    <div>STR: ${animal.ability_scores.strength}</div>
-                    <div>DEX: ${animal.ability_scores.dexterity}</div>
-                    <div>CON: ${animal.ability_scores.constitution}</div>
-                    <div>INT: ${animal.ability_scores.intelligence}</div>
-                    <div>WIS: ${animal.ability_scores.wisdom}</div>
-                    <div>CHA: ${animal.ability_scores.charisma}</div>
-                </div>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>STR</th>
+                            <th>DEX</th>
+                            <th>CON</th>
+                            <th>INT</th>
+                            <th>WIS</th>
+                            <th>CHA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>${animal.ability_scores.strength}</td>
+                            <td>${animal.ability_scores.dexterity}</td>
+                            <td>${animal.ability_scores.constitution}</td>
+                            <td>${animal.ability_scores.intelligence}</td>
+                            <td>${animal.ability_scores.wisdom}</td>
+                            <td>${animal.ability_scores.charisma}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                <div class="detail-group">
-                    <h3>Saves</h3>
-                    <div>Fort: ${formatSigned(animal.saves.fortitude)}</div>
-                    <div>Ref: ${formatSigned(animal.saves.reflex)}</div>
-                    <div>Will: ${formatSigned(animal.saves.will)}</div>
-                </div>
+            <!-- Saves -->
 
-                <div class="detail-group">
-                    <h3>Speeds</h3>
-                    <div>${formatSpeeds(animal)}</div>
-                </div>
+            <div class="detail-section">
+                <h3>Saves</h3>
 
-                <div class="detail-group">
-                    <h3>Natural Weapons</h3>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>Fort</th>
+                            <th>Ref</th>
+                            <th>Will</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>${formatSigned(animal.saves.fortitude)}</td>
+                            <td>${formatSigned(animal.saves.reflex)}</td>
+                            <td>${formatSigned(animal.saves.will)}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Basic + Speed -->
+
+            <div class="detail-section">
+                <h3>Basic</h3>
+
+                <table class="basic-table">
+                    <tbody>
+                        <tr>
+                            <th>Size</th>
+                            <td>${animal.size}</td>
+                        </tr>
+                        <tr>
+                            <th>Initiative</th>
+                            <td>${formatSigned(animal.init)}</td>
+                        </tr>
+                        <tr>
+                            <th>Armor Class</th>
+                            <td>${animal.armorclass}</td>
+                        </tr>
+                        <tr>
+                            <th>Reach</th>
+                            <td>${animal.reach} ft</td>
+                        </tr>
+                        <tr>
+                            <th>Grapple</th>
+                            <td>${formatSigned(animal.grapple)}</td>
+                        </tr>
+                        <tr>
+                            <th>Speeds</th>
+                            <td>
+                                ${animal.speeds.map(speed => `
+                                    <div>
+                                        ${speed.geography} ${speed.range} ft
+                                    </div>
+                                `).join("")}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Natural Weapons -->
+
+            <div class="detail-section">
+                <h3>Natural Weapons</h3>
+
+                <div class="attack-list">
                     ${naturalWeapons || "<div>None</div>"}
                 </div>
+            </div>
 
-                <div class="detail-group">
-                    <h3>Full Attack</h3>
-                    <div>${fullAttack || "None"}</div>
+            <!-- Full Attack -->
+
+            <div class="detail-section">
+                <h3>Full Attack</h3>
+
+                <div class="attack-list">
+                    ${fullAttack || "None"}
                 </div>
+            </div>
 
-                <div class="detail-group">
-                    <h3>Special Attacks</h3>
-                    <div>${specialAttacks}</div>
+            <!-- Special Attacks -->
+
+            <div class="detail-section">
+                <h3>Special Attacks</h3>
+
+                <div class="attack-list">
+                    ${specialAttacks || "None"}
                 </div>
+            </div>
 
-                <div class="detail-group">
-                    <h3>Notes</h3>
-                    <div>${animal.notes || "None"}</div>
-                </div>
+            <!-- Notes -->
 
+            <div class="detail-section notes">
+                <h3>Notes</h3>
+                ${animal.notes || "<p>None</p>"}
             </div>
         `;
 
-        details.style.display = "block";
-    }
-
+        details.classList.add("open");
+    }    
 
     /*
      * Events
@@ -733,6 +963,11 @@
             });
         });
 
+        document.addEventListener("keydown", event => {
+            if (event.key === "Escape") {
+                closeDetails();
+            }
+        });
 
     /*
      * Start
@@ -743,4 +978,3 @@
 
 </body>
 </html>
-```

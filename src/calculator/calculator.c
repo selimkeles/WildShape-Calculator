@@ -162,6 +162,10 @@ static void calculate_ws_allowance(animal_specs_t *animal, wildshape_form_t *ws_
     {
         return;
     }
+    else if (HERO_DRUID_LV < 20 && animal->type > TYPE_PLANT && animal->size > SIZE_LARGE)
+    {
+        return;
+    }
     else if (HERO_DRUID_LV < 9 && (animal->size < SIZE_SMALL || animal->size > SIZE_MEDIUM))
     {
         return;
@@ -189,8 +193,8 @@ wildshape_form_t calc_new_stats(animal_specs_t animal_base)
 {
     wildshape_form_t ws_form = {0};
     copy_ability_stats(&animal_base, &ws_form.ability_scores);
-    copy_const_stats(&animal_base, &ws_form);
     calculate_ability_modifiers(&ws_form.ability_scores, &ws_form.ability_modifiers);
+    copy_const_stats(&animal_base, &ws_form);
     calculate_grapple(&ws_form);
     calculate_saves(&ws_form);
     copy_movement_stats(&animal_base, &ws_form);

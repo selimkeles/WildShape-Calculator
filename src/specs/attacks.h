@@ -25,7 +25,10 @@ typedef enum
     NW_TALON,
     NW_SLAM,
     NW_TAIL_SLAP,
-    NW_ARMS
+    NW_ARMS,
+    NW_STAMP,
+    NW_WING,
+    NW_BURNING_TOUCH
 } natural_weapon_type_t;
 
 typedef enum
@@ -44,7 +47,20 @@ typedef enum
     SA_POWERFUL_CHARGE,
     SA_ATTACH,
     SA_BLOOD_DRAIN,
-    SA_DISEASE
+    SA_DISEASE,
+    SA_SHRIEK,
+    SA_ENTANGLE,
+    SA_PARALYSIS,
+    SA_SWALLOW_WHOLE,
+    SA_DISTRACTION,
+    SA_WHIRLWIND,
+    SA_VORTEX,
+    SA_BURN,
+    SA_PUSH,
+    SA_SMOKE_CLAWS,
+    SA_COMBUSTION,
+    SA_FIERY_AURA,
+    SA_HEAT
     // ...
 } special_attack_type_t;
 

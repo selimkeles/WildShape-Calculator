@@ -50,6 +50,12 @@ const char *animal_size_to_string(animal_size_t size)
 {
     switch (size)
     {
+        case SIZE_FINE:
+            return "Fine";
+
+        case SIZE_DIMINUTIVE:
+            return "Diminutive";
+
         case SIZE_TINY:
             return "Tiny";
 
@@ -61,6 +67,15 @@ const char *animal_size_to_string(animal_size_t size)
 
         case SIZE_LARGE:
             return "Large";
+
+        case SIZE_HUGE:
+            return "Huge";
+
+        case SIZE_GARGANTUAN:
+            return "Gargantuan";
+
+        case SIZE_COLOSSAL:
+            return "Colossal";
 
         default:
             return "Unknown";
@@ -152,6 +167,15 @@ const char *natural_weapon_type_to_string(natural_weapon_type_t type)
         case NW_ARMS:
             return "Arms";
 
+        case NW_STAMP:
+            return "Stamp";
+
+        case NW_WING:
+            return "Wing";
+
+        case NW_BURNING_TOUCH:
+            return "Burning Touch";
+
         default:
             return "Unknown";
     }
@@ -226,6 +250,45 @@ const char *special_attack_type_to_string(special_attack_type_t type)
 
         case SA_DISEASE:
             return "Disease";
+
+        case SA_SHRIEK:
+            return "Shriek";
+
+        case SA_ENTANGLE:
+            return "Entangle";
+
+        case SA_PARALYSIS:
+            return "Paralysis";
+
+        case SA_SWALLOW_WHOLE:
+            return "Swallow Whole";
+
+        case SA_DISTRACTION:
+            return "Distraction";
+
+        case SA_WHIRLWIND:
+            return "Whirlwind";
+
+        case SA_VORTEX:
+            return "Vortex";
+
+        case SA_BURN:
+            return "Burn";
+
+        case SA_PUSH:
+            return "Push";
+
+        case SA_SMOKE_CLAWS:
+            return "Smoke Claws";
+
+        case SA_COMBUSTION:
+            return "Combustion";
+
+        case SA_FIERY_AURA:
+            return "Fiery Aura";
+
+        case SA_HEAT:
+            return "Heat";
 
         default:
             return "Unknown";
