@@ -1,8 +1,6 @@
 #ifndef DRUID_H
 #define DRUID_H
 
-#define HERO_DRUID_LV 9
-
 typedef enum
 {
     LEVEL_O,

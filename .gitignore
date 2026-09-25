@@ -30,8 +30,8 @@ luna_assignment
 # Debug files
 *.dSYM/
 
-# Make files
-Makefile
+# Make files (only generated build artifacts; the hand-written top-level
+# Makefile is tracked)
 *.deps
 *.user
 *.suo

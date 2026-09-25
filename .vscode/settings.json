@@ -124,4 +124,13 @@
     // ── C/C++ Extension (cpptools) ──────────────────────────────────────
     "C_Cpp.intelliSenseEngine": "disabled",
     "C_Cpp.formatting": "disabled",
+    "cmake.sourceDirectory": "/home/msk/Documents/Repos/DnDStuff/WildShape/tests",
+    "cmake.ignoreCMakeListsMissing": true,
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/msk/Documents/Repos/DnDStuff/WildShape/build-make/bin",
+            "binaryPath": "/home/msk/Documents/Repos/DnDStuff/WildShape/build-make/bin/WildShapeCalculator",
+            "binaryArgs": []
+        }
+    ],
 }

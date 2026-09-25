@@ -1,280 +1,585 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D&D 3.5 Wild Shape</title>
 
-    <title>D&D 3.5 Wild Shape</title>
+<style>
+* {
+    box-sizing: border-box;
+}
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+:root {
+    --parchment: #e0d0bb;
+    --parchment-light: #f7eee3;
+    --brown-dark: #5c4633;
+    --brown: #8c7054;
+    --brown-light: #a68563;
+    --brown-border: #80664c;
+    --text: #222;
+    --link: #102f78;
+    --white: #fff;
+}
 
-        :root {
-            --parchment: #e0d0bb;
-            --parchment-light: #f7eee3;
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 24px;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.15), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(90,60,35,.08), transparent 45%),
+        var(--parchment);
+    min-height: 100vh;
+}
 
-            --brown-dark: #5c4633;
-            --brown: #8c7054;
-            --brown-light: #a68563;
-            --brown-border: #80664c;
+h1 {
+    margin-top: 0;
+    color: var(--brown-dark);
+}
 
-            --text: #222;
-            --link: #102f78;
+.controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
 
-            --white: #fff;
-        }
+input,
+select,
+button {
+    font: inherit;
+    padding: 8px 10px;
+    background: var(--parchment-light);
+    border: 1px solid var(--brown-border);
+    color: var(--text);
+}
 
-        body {
-            font-family: system-ui, sans-serif;
-            margin: 0;
-            padding: 24px;
-            color: var(--text);
-            background:
-                radial-gradient(
-                    circle at 20% 20%,
-                    rgba(255, 255, 255, 0.15),
-                    transparent 40%
-                ),
-                radial-gradient(
-                    circle at 80% 70%,
-                    rgba(90, 60, 35, 0.08),
-                    transparent 45%
-                ),
-                var(--parchment);
-            min-height: 100vh;
-        }
+input {
+    min-width: 250px;
+}
 
-        h1 {
-            margin-top: 0;
-            color: var(--brown-dark);
-        }
+button {
+    cursor: pointer;
+}
 
-        .controls {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 16px;
-        }
+button:hover {
+    background: #ead9c4;
+}
 
-        input,
-        select,
-        button {
-            font: inherit;
-            padding: 8px 10px;
-            background: var(--parchment-light);
-            border: 1px solid var(--brown-border);
-            color: var(--text);
-        }
+.action-button {
+    background: var(--brown-dark);
+    color: white;
+}
 
-        input {
-            min-width: 250px;
-        }
+.action-button:hover {
+    background: var(--brown);
+}
 
-        .table-container {
-            overflow-x: auto;
-            background: var(--parchment-light);
-            border: 1px solid var(--brown-border);
-            box-shadow: 0 2px 8px rgba(70, 45, 25, 0.15);
-        }
+#selection-status {
+    margin-left: auto;
+    color: var(--brown-dark);
+    font-weight: 600;
+    align-self: center;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            white-space: nowrap;
-        }
+.table-container {
+    overflow-x: auto;
+    background: var(--parchment-light);
+    border: 1px solid var(--brown-border);
+    box-shadow: 0 2px 8px rgba(70,45,25,.15);
+}
 
-        th,
-        td {
-            padding: 8px 10px;
-            border: 1px solid var(--brown-border);
-            text-align: left;
-        }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
 
-        th {
-            position: sticky;
-            top: 0;
-            background: var(--brown-light);
-            color: white;
-            cursor: pointer;
-            user-select: none;
-        }
+th,
+td {
+    padding: 8px 10px;
+    border: 1px solid var(--brown-border);
+    text-align: left;
+}
 
-        td {
-            background: var(--parchment-light);
-        }
+th {
+    position: sticky;
+    top: 0;
+    background: var(--brown-light);
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
 
-        tbody tr {
-            cursor: pointer;
-        }
+td {
+    background: var(--parchment-light);
+}
 
-        tbody tr:nth-child(even) td {
-            background: #ead9c4;
-        }
+tbody tr {
+    cursor: pointer;
+}
 
-        tbody tr:hover td {
-            background: #dfc5a6;
-        }
+tbody tr:nth-child(even) td {
+    background: #ead9c4;
+}
 
-        .allowed {
-            font-weight: bold;
-        }
+tbody tr:hover td {
+    background: #dfc5a6;
+}
 
-        .not-allowed {
-            opacity: 0.45;
-        }
+.allowed {
+    font-weight: bold;
+}
 
-        a {
-            color: var(--link);
-        }
+.not-allowed {
+    opacity: .45;
+}
 
-        .details {
-            position: fixed;
-            top: 0;
-            right: 0;
+.selection-cell {
+    width: 42px;
+    text-align: center;
+    cursor: default;
+}
 
-            width: min(450px, 90vw);
-            height: 100vh;
+.selection-cell input {
+    min-width: 0;
+    width: 17px;
+    height: 17px;
+    accent-color: var(--brown-dark);
+    cursor: pointer;
+}
 
-            padding: 24px;
+#status {
+    margin-bottom: 10px;
+    color: var(--brown-dark);
+    font-weight: 600;
+}
 
-            background: #f5eadc;
-            color: var(--text);
-            border-left: 1px solid var(--brown-border);
+.sort-button {
+    background: var(--brown-dark);
+    color: white;
+    border: 1px solid var(--brown-border);
+    padding: 2px 6px;
+    font-size: .75rem;
+    cursor: pointer;
+    margin-left: 4px;
+}
 
-            box-shadow: -4px 0 16px rgba(70, 45, 25, 0.25);
+.details {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(450px, 90vw);
+    height: 100vh;
+    padding: 24px;
+    background: #f5eadc;
+    color: var(--text);
+    border-left: 1px solid var(--brown-border);
+    box-shadow: -4px 0 16px rgba(70,45,25,.25);
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform .2s ease;
+    z-index: 1000;
+}
 
-            overflow-y: auto;
+.details.open {
+    transform: translateX(0);
+}
 
-            transform: translateX(100%);
-            transition: transform 0.2s ease;
+.close-details {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--brown-dark);
+}
 
-            z-index: 1000;
-        }
+.details h2 {
+    color: var(--brown-dark);
+    border-bottom: 2px solid var(--brown);
+    padding-bottom: 8px;
+    margin-top: 0;
+}
 
-        .details.open {
-            transform: translateX(0);
-        }
+.detail-section {
+    margin-top: 24px;
+}
 
-        .close-details {
-            position: absolute;
-            top: 12px;
-            right: 16px;
+.detail-section h3 {
+    margin: 0 0 8px;
+    color: white;
+    background: var(--brown);
+    padding: 5px 8px;
+    border: 1px solid var(--brown-border);
+    font-size: 1rem;
+}
 
-            border: none;
-            background: transparent;
+.stat-table,
+.basic-table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-            font-size: 28px;
-            cursor: pointer;
+.stat-table th,
+.stat-table td {
+    text-align: center;
+    padding: 6px 4px;
+}
 
-            color: var(--brown-dark);
-        }
+.stat-table th {
+    background: var(--brown-light);
+    color: white;
+    font-size: .8rem;
+    font-weight: 600;
+}
 
-        .close-details:hover {
-            color: var(--text);
-        }
+.stat-table td {
+    background: #f8eee2;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
 
-        .details h2 {
-            color: var(--brown-dark);
-            border-bottom: 2px solid var(--brown);
-            padding-bottom: 8px;
-            margin-top: 0;
-        }
+.basic-table th,
+.basic-table td {
+    padding: 6px 4px;
+    border-bottom: 1px solid var(--brown-border);
+}
 
-        .detail-section {
-            margin-top: 24px;
-        }
+.basic-table th {
+    width: 40%;
+    text-align: left;
+    font-weight: 600;
+    background: #dfcbb4;
+    color: var(--brown-dark);
+}
 
-        .detail-section h3 {
-            margin: 0 0 8px;
-            color: white;
-            background: var(--brown);
-            padding: 5px 8px;
-            border: 1px solid var(--brown-border);
-            font-size: 1rem;
-        }
+.basic-table td {
+    text-align: right;
+    background: #f8eee2;
+}
 
-        .stat-table,
-        .basic-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+.attack-list {
+    line-height: 1.7;
+}
 
-        .stat-table th,
-        .stat-table td {
-            text-align: center;
-            padding: 6px 4px;
-        }
+.notes {
+    line-height: 1.5;
+}
 
-        .stat-table th {
-            background: var(--brown-light);
-            color: white;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
+.attack {
+    margin-bottom: 6px;
+}
 
-        .stat-table td {
-            background: #f8eee2;
-            font-size: 1.05rem;
-            font-weight: 600;
-        }
+/* ----------------------------------------------------------
+   Print/PDF layout
+   ---------------------------------------------------------- */
 
-        .basic-table th,
-        .basic-table td {
-            padding: 6px 4px;
-            border-bottom: 1px solid var(--brown-border);
-        }
+/* ----------------------------------------------------------
+   Print/PDF layout
+   ---------------------------------------------------------- */
 
-        .basic-table th {
-            width: 40%;
-            text-align: left;
-            font-weight: 600;
-            background: #dfcbb4;
-            color: var(--brown-dark);
-        }
+#print-view {
+    display: none;
+}
 
-        .basic-table td {
-            text-align: right;
-            background: #f8eee2;
-        }
+@media print {
+    *,
+    *::before,
+    *::after {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    @page {
+        size: A4 landscape;
+        margin: 7mm;
+    }
 
-        .attack-list {
-            line-height: 1.7;
-        }
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
 
-        .notes {
-            line-height: 1.5;
-        }
+    body > *:not(#print-view) {
+        display: none !important;
+    }
 
-        .notes h5 {
-            margin: 16px 0 6px;
-        }
+    #print-view {
+        display: grid !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+        gap: 4mm;
+        width: 100%;
+        height: 196mm;
+        overflow: hidden;
+    }
 
-        .attack {
-            margin-bottom: 6px;
-        }
+    /* .print-card {
+        min-width: 0;
+        min-height: 0;
+        overflow: hidden;
 
-        #status {
-            margin-bottom: 10px;
-            color: var(--brown-dark);
-            font-weight: 600;
-        }
-
-        .sort-button {
-            background: var(--brown-dark);
-            color: white;
-            border: 1px solid var(--brown-border);
-            padding: 2px 6px;
-            font-size: 0.75rem;
-            cursor: pointer;
-            margin-left: 4px;
-        }
+        border: 1px solid #80664c;
+        background: #f5eadc;
+        color: #2f251d;
         
-        .sort-button:hover {
-            background: var(--brown);
-        }
-    </style>
+        padding: 2.5mm;
+
+        break-inside: avoid;
+        page-break-inside: avoid;
+
+        display: flex;
+        flex-direction: column;
+    } */
+    .print-card {
+        min-width: 0;
+        min-height: 0;
+        overflow: hidden;
+
+        border: 1px solid #80664c;
+        border-top: 3px solid #5c4633;
+
+        background: #f5eadc;
+        color: #2f251d;
+
+        padding: 2.5mm;
+
+        break-inside: avoid;
+        page-break-inside: avoid;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ------------------------------------------------------
+       Header
+       ------------------------------------------------------ */
+
+    .print-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+
+        padding-bottom: 1.5mm;
+        border-bottom: 2px solid #80664c;
+    }
+
+    .print-name {
+        min-width: 0;
+
+        color: #4f3928;
+        font-size: 11pt;
+        font-weight: 800;
+        line-height: 1.1;
+        text-transform: uppercase;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .print-size {
+        flex: 0 0 auto;
+
+        margin-left: 2mm;
+
+        color: #6b5139;
+        font-size: 7.5pt;
+        font-weight: 700;
+    }
+
+    /* ------------------------------------------------------
+       Generic section
+       ------------------------------------------------------ */
+
+    .print-section {
+        margin-top: 2mm;
+    }
+
+    /* .print-section-title {
+        color: white;
+        background: #8c7054;
+        border: 1px solid #80664c;
+
+        font-size: 6.5pt;
+        font-weight: 700;
+        line-height: 1;
+
+        padding: 1mm 1.5mm;
+        margin-bottom: 1mm;
+    } */
+    .print-section-title {
+        background: #8c7054;
+        border: 1px solid #80664c;
+
+        color: #fffaf3;
+
+        font-size: 6.5pt;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: .04em;
+
+        padding: 1mm 1.5mm;
+        margin-bottom: 1mm;
+    }
+
+    /* ------------------------------------------------------
+       Ability scores
+       ------------------------------------------------------ */
+
+    .print-abilities {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+
+        border: 1px solid #80664c;
+        background: #80664c;
+    }
+
+    .print-ability {
+        min-width: 0;
+        text-align: center;
+        background: #f8eee2;
+    }
+
+    .print-ability + .print-ability {
+        border-left: 1px solid #80664c;
+    }
+
+    .print-ability-label {
+        background: #8c7054;
+        color: #fffaf3;
+
+        font-size: 5.5pt;
+        font-weight: 700;
+        line-height: 1;
+
+        padding: 1mm 0;
+    }
+
+    .print-ability-value {
+        background: #f8eee2;
+        color: #3b2d21;
+
+        font-size: 8pt;
+        font-weight: 700;
+        line-height: 1;
+
+        padding: 1.2mm 0;
+    }
+
+    /* ------------------------------------------------------
+       Combat / basic statistics
+       AC | Init | Grapple | Reach | Fort | Ref | Will
+       ------------------------------------------------------ */
+
+    .print-combat {
+        display: grid;
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr))
+            repeat(3, minmax(0, .8fr));
+
+        border: 1px solid #80664c;
+        background: #80664c;
+    }
+
+    .print-combat-item {
+        min-width: 0;
+        text-align: center;
+        background: #f8eee2;
+    }
+
+    .print-combat-item + .print-combat-item {
+        border-left: 1px solid #80664c;
+    }
+
+    .print-combat-label {
+        background: #8c7054;
+        color: #fffaf3;
+
+        font-size: 5.5pt;
+        font-weight: 700;
+        line-height: 1;
+
+        padding: 1mm 0;
+    }
+
+    .print-combat-value {
+        background: #f8eee2;
+        color: #3b2d21;
+
+        font-size: 7.5pt;
+        font-weight: 700;
+        line-height: 1;
+
+        padding: 1.2mm 0;
+    }
+
+    /* ------------------------------------------------------
+       Speed
+       ------------------------------------------------------ */
+
+    .print-speed {
+        background: #ead9c4;
+        border: 1px solid #80664c;
+        color: #3b2d21;
+
+        padding: 1mm 1.5mm;
+
+        font-size: 6.5pt;
+        line-height: 1.25;
+    }
+
+    .print-speed-label {
+        color: #5c4633;
+        font-weight: 700;
+    }
+
+    /* ------------------------------------------------------
+       Natural weapons / attacks
+       ------------------------------------------------------ */
+
+    .print-lines {
+        background: #f8eee2;
+        border: 1px solid #80664c;
+        color: #30251d;
+
+        padding: 1.2mm 1.5mm;
+
+        font-size: 6.5pt;
+        line-height: 1.3;
+    }
+
+    .print-line + .print-line {
+        margin-top: .7mm;
+    }
+
+    .print-line-label {
+        color: #5c4633;
+        font-weight: 700;
+    }
+
+    .print-empty {
+        opacity: .6;
+        color: #80664c;
+    }
+
+    /* Keep the lower sections compact */
+    .print-section.compact {
+        margin-top: 1.5mm;
+    }
+
+    .print-section.compact .print-section-title {
+        margin-bottom: .8mm;
+    }
+}
+</style>
 </head>
 
 <body>
@@ -282,11 +587,7 @@
 <h1>D&D 3.5 Wild Shape</h1>
 
 <div class="controls">
-    <input
-        type="search"
-        id="search"
-        placeholder="Search animals..."
-    >
+    <input type="search" id="search" placeholder="Search animals...">
 
     <select id="size-filter">
         <option value="">All sizes</option>
@@ -301,6 +602,13 @@
         <option value="true">Allowed</option>
         <option value="false">Not allowed</option>
     </select>
+
+    <button id="clear-selection" type="button">Clear Selection</button>
+    <button id="print-selected" class="action-button" type="button">
+        Print Selected
+    </button>
+
+    <span id="selection-status">0 / 8 selected</span>
 </div>
 
 <div id="status"></div>
@@ -309,671 +617,843 @@
     <table>
         <thead>
             <tr>
+                <th class="selection-cell">PDF</th>
                 <th data-sort="name">Name</th>
                 <th data-sort="size">Size</th>
                 <th data-sort="armorclass">AC</th>
                 <th data-sort="reach">Reach</th>
                 <th data-sort="grapple">Grapple</th>
-
                 <th data-sort="strength">STR</th>
                 <th data-sort="dexterity">DEX</th>
                 <th data-sort="constitution">CON</th>
-
                 <th data-sort="fortitude">Fort</th>
                 <th data-sort="reflex">Ref</th>
                 <th data-sort="will">Will</th>
-
                 <th data-sort="fastest">Fastest</th>
-
                 <th>
                     Natural Attacks
                     <button class="sort-button" data-sort="attack_bonus">AB</button>
                     <button class="sort-button" data-sort="damage_bonus">DMG</button>
                     <button class="sort-button" data-sort="dice">DICE</button>
                 </th>
-
                 <th>Full Attack</th>
                 <th>Special Attacks</th>
             </tr>
         </thead>
-
         <tbody id="animal-table"></tbody>
     </table>
 </div>
 
 <div id="details" class="details"></div>
 
+<!-- Dedicated print layout. It is populated from the same animal objects. -->
+<div id="print-view"></div>
+
 <script>
+const DICE_ORDER = [
+    "1d0", "1d2", "1d3", "1d4", "1d6", "1d8",
+    "2d4", "1d10", "2d6", "2d8", "3d6", "3d8",
+    "4d6", "4d8", "6d6", "6d8", "8d6", "8d8",
+    "12d6", "12d8"
+];
 
-    const DICE_ORDER = [
-    "1d0",
-    "1d2",
-    "1d3",
-    "1d4",
-    "1d6",
-    "1d8",
-    "2d4",
-    "1d10",
-    "2d6",
-    "2d8",
-    "3d6",
-    "3d8",
-    "4d6",
-    "4d8",
-    "6d6",
-    "6d8",
-    "8d6",
-    "8d8",
-    "12d6",
-    "12d8"
-    ];
+const DICE_RANK = new Map(
+    DICE_ORDER.map((dice, index) => [dice, index])
+);
 
-    const DICE_RANK = new Map(
-        DICE_ORDER.map((dice, index) => [dice, index])
-    );
+let animals = [];
+let filteredAnimals = [];
+let sortColumn = "name";
+let sortAscending = true;
 
-    let animals = [];
-    let filteredAnimals = [];
+/* Names are used as selection identifiers. */
+const selectedAnimals = new Set();
+const MAX_SELECTIONS = 8;
 
-    let sortColumn = "name";
-    let sortAscending = true;
+/* ----------------------------------------------------------
+   Loading
+   ---------------------------------------------------------- */
 
+async function loadAnimals() {
+    try {
+        const response = await fetch("wildshape.json");
 
-    /*
-     * Load JSON
-     */
-
-    async function loadAnimals() {
-        try {
-            const response = await fetch("wildshape.json");
-
-            if (!response.ok) {
-                throw new Error(`HTTP ${response.status}`);
-            }
-
-            const data = await response.json();
-
-            animals = data.animals;
-            filteredAnimals = [...animals];
-
-            populateFilters();
-            renderTable();
-
-        } catch (error) {
-            document.getElementById("status").textContent =
-                "Failed to load wildshape.json: " + error;
-        }
-    }
-
-
-    /*
-     * Filters
-     */
-
-    function populateFilters() {
-        const sizes = [...new Set(
-            animals.map(animal => animal.size)
-        )].sort();
-
-        const types = [...new Set(
-            animals.map(animal => animal.type)
-        )].sort();
-
-        const sizeFilter = document.getElementById("size-filter");
-        const typeFilter = document.getElementById("type-filter");
-
-        for (const size of sizes) {
-            const option = document.createElement("option");
-            option.value = size;
-            option.textContent = size;
-            sizeFilter.appendChild(option);
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
         }
 
-        for (const type of types) {
-            const option = document.createElement("option");
-            option.value = type;
-            option.textContent = type;
-            typeFilter.appendChild(option);
-        }
-    }
+        const data = await response.json();
+        animals = data.animals;
+        filteredAnimals = [...animals];
 
-
-    function applyFilters() {
-        const search =
-            document.getElementById("search").value.toLowerCase();
-
-        const size =
-            document.getElementById("size-filter").value;
-
-        const type =
-            document.getElementById("type-filter").value;
-
-        const allowed =
-            document.getElementById("allowed-filter").value;
-
-        filteredAnimals = animals.filter(animal => {
-
-            if (
-                search &&
-                !animal.name.toLowerCase().includes(search)
-            ) {
-                return false;
-            }
-
-            if (size && animal.size !== size) {
-                return false;
-            }
-
-            if (type && animal.type !== type) {
-                return false;
-            }
-
-            if (
-                allowed &&
-                String(animal.allowed) !== allowed
-            ) {
-                return false;
-            }
-
-            return true;
-        });
-
+        populateFilters();
         sortAnimals();
         renderTable();
+        updateSelectionStatus();
+    } catch (error) {
+        document.getElementById("status").textContent =
+            "Failed to load wildshape.json: " + error;
+    }
+}
+
+/* ----------------------------------------------------------
+   Filters
+   ---------------------------------------------------------- */
+
+function populateFilters() {
+    const sizes = [...new Set(animals.map(animal => animal.size))].sort();
+    const types = [...new Set(animals.map(animal => animal.type))].sort();
+
+    const sizeFilter = document.getElementById("size-filter");
+    const typeFilter = document.getElementById("type-filter");
+
+    for (const size of sizes) {
+        const option = document.createElement("option");
+        option.value = size;
+        option.textContent = size;
+        sizeFilter.appendChild(option);
     }
 
-    /*
-     * Sorting
-     */
+    for (const type of types) {
+        const option = document.createElement("option");
+        option.value = type;
+        option.textContent = type;
+        typeFilter.appendChild(option);
+    }
+}
 
-    function sortAnimals() {
-        filteredAnimals.sort((a, b) => {
+function applyFilters() {
+    const search =
+        document.getElementById("search").value.toLowerCase();
 
-            let valueA;
-            let valueB;
+    const size =
+        document.getElementById("size-filter").value;
 
-            switch (sortColumn) {
+    const type =
+        document.getElementById("type-filter").value;
 
-                case "strength":
-                    valueA = a.ability_scores.strength;
-                    valueB = b.ability_scores.strength;
-                    break;
+    const allowed =
+        document.getElementById("allowed-filter").value;
 
-                case "dexterity":
-                    valueA = a.ability_scores.dexterity;
-                    valueB = b.ability_scores.dexterity;
-                    break;
+    filteredAnimals = animals.filter(animal => {
+        if (search && !animal.name.toLowerCase().includes(search)) {
+            return false;
+        }
 
-                case "constitution":
-                    valueA = a.ability_scores.constitution;
-                    valueB = b.ability_scores.constitution;
-                    break;
+        if (size && animal.size !== size) {
+            return false;
+        }
 
-                case "fortitude":
-                    valueA = a.saves.fortitude;
-                    valueB = b.saves.fortitude;
-                    break;
+        if (type && animal.type !== type) {
+            return false;
+        }
 
-                case "reflex":
-                    valueA = a.saves.reflex;
-                    valueB = b.saves.reflex;
-                    break;
+        if (allowed && String(animal.allowed) !== allowed) {
+            return false;
+        }
 
-                case "will":
-                    valueA = a.saves.will;
-                    valueB = b.saves.will;
-                    break;
+        return true;
+    });
 
-                case "fastest":
-                    valueA = getFastestSpeed(a)?.range ?? -1;
-                    valueB = getFastestSpeed(b)?.range ?? -1;
-                    break;
+    sortAnimals();
+    renderTable();
+}
 
-                case "attack_bonus":
+/* ----------------------------------------------------------
+   Sorting
+   ---------------------------------------------------------- */
+
+function sortAnimals() {
+    filteredAnimals.sort((a, b) => {
+        let valueA;
+        let valueB;
+
+        switch (sortColumn) {
+            case "strength":
+                valueA = a.ability_scores.strength;
+                valueB = b.ability_scores.strength;
+                break;
+
+            case "dexterity":
+                valueA = a.ability_scores.dexterity;
+                valueB = b.ability_scores.dexterity;
+                break;
+
+            case "constitution":
+                valueA = a.ability_scores.constitution;
+                valueB = b.ability_scores.constitution;
+                break;
+
+            case "fortitude":
+                valueA = a.saves.fortitude;
+                valueB = b.saves.fortitude;
+                break;
+
+            case "reflex":
+                valueA = a.saves.reflex;
+                valueB = b.saves.reflex;
+                break;
+
+            case "will":
+                valueA = a.saves.will;
+                valueB = b.saves.will;
+                break;
+
+            case "fastest":
+                valueA = getFastestSpeed(a)?.range ?? -1;
+                valueB = getFastestSpeed(b)?.range ?? -1;
+                break;
+
+            case "attack_bonus":
                 valueA = getHighestAttackBonus(a);
                 valueB = getHighestAttackBonus(b);
                 break;
 
-                case "damage_bonus":
-                    valueA = getHighestDamageBonus(a);
-                    valueB = getHighestDamageBonus(b);
-                    break;
+            case "damage_bonus":
+                valueA = getHighestDamageBonus(a);
+                valueB = getHighestDamageBonus(b);
+                break;
 
-                case "dice":
-                    valueA = getHighestDiceRank(a);
-                    valueB = getHighestDiceRank(b);
-                    break;
+            case "dice":
+                valueA = getHighestDiceRank(a);
+                valueB = getHighestDiceRank(b);
+                break;
 
-                default:
-                    valueA = a[sortColumn];
-                    valueB = b[sortColumn];
-                    break;
-            }
+            default:
+                valueA = a[sortColumn];
+                valueB = b[sortColumn];
+                break;
+        }
 
-            if (typeof valueA === "string") {
-                return sortAscending
-                    ? valueA.localeCompare(valueB)
-                    : valueB.localeCompare(valueA);
-            }
-
+        if (typeof valueA === "string") {
             return sortAscending
-                ? valueA - valueB
-                : valueB - valueA;
+                ? valueA.localeCompare(valueB)
+                : valueB.localeCompare(valueA);
+        }
+
+        return sortAscending
+            ? valueA - valueB
+            : valueB - valueA;
+    });
+}
+
+/* ----------------------------------------------------------
+   Formatting helpers
+   ---------------------------------------------------------- */
+
+function formatSigned(value) {
+    return value >= 0 ? `+${value}` : `${value}`;
+}
+
+function formatSpeeds(animal) {
+    return animal.speeds
+        .map(speed => `${speed.geography} ${speed.range} ft`)
+        .join(", ");
+}
+
+function formatFullAttack(animal) {
+    return animal.attacks.full_attack
+        .map(entry => `${entry.type} ×${entry.count}`)
+        .join(", ");
+}
+
+function formatSpecialAttacks(animal) {
+    return animal.attacks.special_attacks
+        .map(entry => {
+            if (entry.count !== 1) {
+                return `${entry.type} ×${entry.count}`;
+            }
+            return entry.type;
+        })
+        .join(", ");
+}
+
+function getFastestSpeed(animal) {
+    if (!animal.speeds || animal.speeds.length === 0) {
+        return null;
+    }
+
+    return animal.speeds.reduce((fastest, speed) =>
+        speed.range > fastest.range ? speed : fastest
+    );
+}
+
+function formatFastestSpeed(animal) {
+    const speed = getFastestSpeed(animal);
+
+    if (!speed) {
+        return "—";
+    }
+
+    return `${speed.geography} ${speed.range} ft`;
+}
+
+function formatNaturalAttacks(animal) {
+    return animal.attacks.natural_weapons
+        .map(weapon => {
+            const damage =
+                `${weapon.dice_count}d${weapon.dice_sides}` +
+                `${formatSigned(weapon.damage_bonus)}`;
+
+            return `${weapon.type} ${formatSigned(weapon.attack_bonus)} (${damage})`;
+        })
+        .join(", ");
+}
+
+function getDiceKey(weapon) {
+    return `${weapon.dice_count}d${weapon.dice_sides}`;
+}
+
+function getHighestDiceRank(animal) {
+    if (!animal.attacks.natural_weapons.length) {
+        return -1;
+    }
+
+    return Math.max(
+        ...animal.attacks.natural_weapons.map(weapon =>
+            DICE_RANK.get(getDiceKey(weapon)) ?? -1
+        )
+    );
+}
+
+function getHighestAttackBonus(animal) {
+    if (!animal.attacks.natural_weapons.length) {
+        return -Infinity;
+    }
+
+    return Math.max(
+        ...animal.attacks.natural_weapons.map(
+            weapon => weapon.attack_bonus
+        )
+    );
+}
+
+function getHighestDamageBonus(animal) {
+    if (!animal.attacks.natural_weapons.length) {
+        return -Infinity;
+    }
+
+    return Math.max(
+        ...animal.attacks.natural_weapons.map(
+            weapon => weapon.damage_bonus
+        )
+    );
+}
+
+/* ----------------------------------------------------------
+   Main table
+   ---------------------------------------------------------- */
+
+function renderTable() {
+    const tbody = document.getElementById("animal-table");
+    tbody.innerHTML = "";
+
+    for (const animal of filteredAnimals) {
+        const row = document.createElement("tr");
+
+        row.className = animal.allowed
+            ? "allowed"
+            : "not-allowed";
+
+        row.innerHTML = `
+            <td class="selection-cell">
+                <input
+                    type="checkbox"
+                    class="pdf-checkbox"
+                    aria-label="Select ${escapeHtml(animal.name)} for PDF"
+                    ${selectedAnimals.has(animal.name) ? "checked" : ""}
+                >
+            </td>
+            <td>${escapeHtml(animal.name)}</td>
+            <td>${escapeHtml(animal.size)}</td>
+            <td>${animal.armorclass}</td>
+            <td>${animal.reach} ft</td>
+            <td>${formatSigned(animal.grapple)}</td>
+            <td>${animal.ability_scores.strength}</td>
+            <td>${animal.ability_scores.dexterity}</td>
+            <td>${animal.ability_scores.constitution}</td>
+            <td>${formatSigned(animal.saves.fortitude)}</td>
+            <td>${formatSigned(animal.saves.reflex)}</td>
+            <td>${formatSigned(animal.saves.will)}</td>
+            <td>${escapeHtml(formatFastestSpeed(animal))}</td>
+            <td>${escapeHtml(formatNaturalAttacks(animal))}</td>
+            <td>${escapeHtml(formatFullAttack(animal))}</td>
+            <td>${escapeHtml(formatSpecialAttacks(animal))}</td>
+        `;
+
+        const checkbox = row.querySelector(".pdf-checkbox");
+
+        checkbox.addEventListener("click", event => {
+            event.stopPropagation();
         });
+
+        checkbox.addEventListener("change", event => {
+            event.stopPropagation();
+
+            if (event.target.checked) {
+                if (selectedAnimals.size >= MAX_SELECTIONS) {
+                    event.target.checked = false;
+                    alert(`You can select up to ${MAX_SELECTIONS} forms.`);
+                    return;
+                }
+
+                selectedAnimals.add(animal.name);
+            } else {
+                selectedAnimals.delete(animal.name);
+            }
+
+            updateSelectionStatus();
+        });
+
+        row.addEventListener("click", event => {
+            if (event.target.closest(".selection-cell")) {
+                return;
+            }
+
+            showDetails(animal);
+        });
+
+        tbody.appendChild(row);
     }
 
+    document.getElementById("status").textContent =
+        `${filteredAnimals.length} / ${animals.length} forms`;
+}
 
-    /*
-     * Formatting helpers
-     */
+/* ----------------------------------------------------------
+   Details
+   ---------------------------------------------------------- */
 
-    function formatSigned(value) {
-        return value >= 0 ? `+${value}` : `${value}`;
-    }
+function closeDetails() {
+    document.getElementById("details").classList.remove("open");
+}
 
+function showDetails(animal) {
+    const details = document.getElementById("details");
 
-    function formatSpeeds(animal) {
-        return animal.speeds
+    const naturalWeapons =
+        animal.attacks.natural_weapons
+            .map(weapon => `
+                <div class="attack">
+                    <strong>${escapeHtml(weapon.type)}</strong>
+                    (${escapeHtml(weapon.role)})
+                    ${formatSigned(weapon.attack_bonus)}
+                    —
+                    ${weapon.dice_count}d${weapon.dice_sides}${formatSigned(weapon.damage_bonus)}
+                </div>
+            `)
+            .join("");
+
+    const fullAttack = formatFullAttack(animal);
+    const specialAttacks =
+        formatSpecialAttacks(animal) || "None";
+
+    details.innerHTML = `
+        <button class="close-details" onclick="closeDetails()">×</button>
+
+        <h2>${escapeHtml(animal.name)}</h2>
+
+        <div class="detail-section">
+            <h3>Ability Scores</h3>
+            <table class="stat-table">
+                <thead>
+                    <tr>
+                        <th>STR</th><th>DEX</th><th>CON</th>
+                        <th>INT</th><th>WIS</th><th>CHA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>${animal.ability_scores.strength}</td>
+                        <td>${animal.ability_scores.dexterity}</td>
+                        <td>${animal.ability_scores.constitution}</td>
+                        <td>${animal.ability_scores.intelligence}</td>
+                        <td>${animal.ability_scores.wisdom}</td>
+                        <td>${animal.ability_scores.charisma}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="detail-section">
+            <h3>Saves</h3>
+            <table class="stat-table">
+                <thead>
+                    <tr><th>Fort</th><th>Ref</th><th>Will</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>${formatSigned(animal.saves.fortitude)}</td>
+                        <td>${formatSigned(animal.saves.reflex)}</td>
+                        <td>${formatSigned(animal.saves.will)}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="detail-section">
+            <h3>Basic</h3>
+            <table class="basic-table">
+                <tbody>
+                    <tr><th>Size</th><td>${escapeHtml(animal.size)}</td></tr>
+                    <tr><th>Initiative</th><td>${formatSigned(animal.init)}</td></tr>
+                    <tr><th>Armor Class</th><td>${animal.armorclass}</td></tr>
+                    <tr><th>Reach</th><td>${animal.reach} ft</td></tr>
+                    <tr><th>Grapple</th><td>${formatSigned(animal.grapple)}</td></tr>
+                    <tr><th>Speeds</th><td>${animal.speeds.map(speed =>
+                        `<div>${escapeHtml(speed.geography)} ${speed.range} ft</div>`
+                    ).join("")}</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="detail-section">
+            <h3>Natural Weapons</h3>
+            <div class="attack-list">
+                ${naturalWeapons || "<div>None</div>"}
+            </div>
+        </div>
+
+        <div class="detail-section">
+            <h3>Full Attack</h3>
+            <div class="attack-list">${escapeHtml(fullAttack || "None")}</div>
+        </div>
+
+        <div class="detail-section">
+            <h3>Special Attacks</h3>
+            <div class="attack-list">${escapeHtml(specialAttacks)}</div>
+        </div>
+
+        <div class="detail-section notes">
+            <h3>Notes</h3>
+            ${animal.notes || "<p>None</p>"}
+        </div>
+    `;
+
+    details.classList.add("open");
+}
+
+/* ----------------------------------------------------------
+   PDF selection
+   ---------------------------------------------------------- */
+
+function updateSelectionStatus() {
+    document.getElementById("selection-status").textContent =
+        `${selectedAnimals.size} / ${MAX_SELECTIONS} selected`;
+}
+
+function clearSelection() {
+    selectedAnimals.clear();
+    updateSelectionStatus();
+    renderTable();
+}
+
+function getSelectedAnimals() {
+    return animals.filter(animal =>
+        selectedAnimals.has(animal.name)
+    );
+}
+
+/* ----------------------------------------------------------
+   Print renderer
+   ---------------------------------------------------------- */
+
+function renderPrintView() {
+    const printView = document.getElementById("print-view");
+    const selected = getSelectedAnimals();
+
+    printView.innerHTML = selected
+        .map(renderPrintCard)
+        .join("");
+}
+
+function renderPrintCard(animal) {
+    const abilities = [
+        ["STR", animal.ability_scores.strength],
+        ["DEX", animal.ability_scores.dexterity],
+        ["CON", animal.ability_scores.constitution],
+        ["INT", animal.ability_scores.intelligence],
+        ["WIS", animal.ability_scores.wisdom],
+        ["CHA", animal.ability_scores.charisma]
+    ];
+
+    const speeds =
+        animal.speeds
             .map(speed =>
                 `${speed.geography} ${speed.range} ft`
             )
-            .join(", ");
-    }
+            .join(", ") || "—";
 
-
-    function formatFullAttack(animal) {
-        return animal.attacks.full_attack
-            .map(entry =>
-                `${entry.type} ×${entry.count}`
-            )
-            .join(", ");
-    }
-
-
-    function formatSpecialAttacks(animal) {
-        return animal.attacks.special_attacks
-            .map(entry => {
-
-                if (entry.count !== 1) {
-                    return `${entry.type} ×${entry.count}`;
-                }
-
-                return entry.type;
-            })
-            .join(", ");
-    }
-
-    function getFastestSpeed(animal) {
-        if (!animal.speeds || animal.speeds.length === 0) {
-            return null;
-        }
-
-        return animal.speeds.reduce((fastest, speed) => {
-            return speed.range > fastest.range ? speed : fastest;
-        });
-    }
-
-
-    function formatFastestSpeed(animal) {
-        const speed = getFastestSpeed(animal);
-
-        if (!speed) {
-            return "—";
-        }
-
-        return `${speed.geography} ${speed.range} ft`;
-    }
-
-    function formatNaturalAttacks(animal) {
-        return animal.attacks.natural_weapons
+    const naturalWeapons =
+        animal.attacks.natural_weapons
             .map(weapon => {
                 const damage =
                     `${weapon.dice_count}d${weapon.dice_sides}` +
                     `${formatSigned(weapon.damage_bonus)}`;
 
-                return `${weapon.type} ${formatSigned(weapon.attack_bonus)} (${damage})`;
-            })
-            .join(", ");
-    }
-
-    function getDiceKey(weapon) {
-        return `${weapon.dice_count}d${weapon.dice_sides}`;
-    }
-
-    function getHighestDiceRank(animal) {
-        if (!animal.attacks.natural_weapons.length) {
-            return -1;
-        }
-
-        return Math.max(
-            ...animal.attacks.natural_weapons.map(weapon => {
-                return DICE_RANK.get(getDiceKey(weapon)) ?? -1;
-            })
-        );
-    }
-
-    function getHighestAttackBonus(animal) {
-        if (!animal.attacks.natural_weapons.length) {
-            return -Infinity;
-        }
-
-        return Math.max(
-            ...animal.attacks.natural_weapons.map(
-                weapon => weapon.attack_bonus
-            )
-        );
-    }
-
-    function getHighestDamageBonus(animal) {
-        if (!animal.attacks.natural_weapons.length) {
-            return -Infinity;
-        }
-
-        return Math.max(
-            ...animal.attacks.natural_weapons.map(
-                weapon => weapon.damage_bonus
-            )
-        );
-    }
-
-    /*
-     * Render table
-     */
-
-    function renderTable() {
-        const tbody = document.getElementById("animal-table");
-
-        tbody.innerHTML = "";
-
-        for (const animal of filteredAnimals) {
-
-            const row = document.createElement("tr");
-
-            row.className =
-                animal.allowed
-                    ? "allowed"
-                    : "not-allowed";
-
-            row.innerHTML = `
-                <td>${animal.name}</td>
-                <td>${animal.size}</td>
-                <td>${animal.armorclass}</td>
-                <td>${animal.reach} ft</td>
-                <td>${formatSigned(animal.grapple)}</td>
-
-                <td>${animal.ability_scores.strength}</td>
-                <td>${animal.ability_scores.dexterity}</td>
-                <td>${animal.ability_scores.constitution}</td>
-
-                <td>${formatSigned(animal.saves.fortitude)}</td>
-                <td>${formatSigned(animal.saves.reflex)}</td>
-                <td>${formatSigned(animal.saves.will)}</td>
-
-                <td>${formatFastestSpeed(animal)}</td>
-
-                <td>${formatNaturalAttacks(animal)}</td>
-                <td>${formatFullAttack(animal)}</td>
-                <td>${formatSpecialAttacks(animal)}</td>
-            `;
-
-            row.addEventListener("click", () => {
-                showDetails(animal);
-            });
-
-            tbody.appendChild(row);
-        }
-
-        document.getElementById("status").textContent =
-            `${filteredAnimals.length} / ${animals.length} forms`;
-    }
-
-
-    /*
-     * Detailed view
-     */
-
-    function closeDetails() {
-        document
-            .getElementById("details")
-            .classList.remove("open");
-    }
-
-    function showDetails(animal) {
-
-        const details = document.getElementById("details");
-
-        const naturalWeapons =
-            animal.attacks.natural_weapons
-                .map(weapon => `
-                    <div class="attack">
-                        <strong>${weapon.type}</strong>
-                        (${weapon.role})
+                return `
+                    <div class="print-line">
+                        <span class="print-line-label">
+                            ${escapeHtml(weapon.type)}
+                        </span>
                         ${formatSigned(weapon.attack_bonus)}
-                        —
-                        ${weapon.dice_count}d${weapon.dice_sides}${formatSigned(weapon.damage_bonus)}
+                        (${damage})
                     </div>
-                `)
-                .join("");
+                `;
+            })
+            .join("") ||
+        `<div class="print-empty">None</div>`;
 
-        const fullAttack =
-            formatFullAttack(animal);
+    const fullAttack =
+        formatFullAttack(animal) || "None";
 
-        const specialAttacks =
-            formatSpecialAttacks(animal) || "None";
+    const specialAttacks =
+        formatSpecialAttacks(animal) || "None";
 
-        details.innerHTML = `
-            <button class="close-details" onclick="closeDetails()">×</button>
+    return `
+        <article class="print-card">
 
-            <h2>${animal.name}</h2>
-
-            <!-- Ability Scores -->
-
-            <div class="detail-section">
-                <h3>Ability Scores</h3>
-
-                <table class="stat-table">
-                    <thead>
-                        <tr>
-                            <th>STR</th>
-                            <th>DEX</th>
-                            <th>CON</th>
-                            <th>INT</th>
-                            <th>WIS</th>
-                            <th>CHA</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>${animal.ability_scores.strength}</td>
-                            <td>${animal.ability_scores.dexterity}</td>
-                            <td>${animal.ability_scores.constitution}</td>
-                            <td>${animal.ability_scores.intelligence}</td>
-                            <td>${animal.ability_scores.wisdom}</td>
-                            <td>${animal.ability_scores.charisma}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Saves -->
-
-            <div class="detail-section">
-                <h3>Saves</h3>
-
-                <table class="stat-table">
-                    <thead>
-                        <tr>
-                            <th>Fort</th>
-                            <th>Ref</th>
-                            <th>Will</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>${formatSigned(animal.saves.fortitude)}</td>
-                            <td>${formatSigned(animal.saves.reflex)}</td>
-                            <td>${formatSigned(animal.saves.will)}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Basic + Speed -->
-
-            <div class="detail-section">
-                <h3>Basic</h3>
-
-                <table class="basic-table">
-                    <tbody>
-                        <tr>
-                            <th>Size</th>
-                            <td>${animal.size}</td>
-                        </tr>
-                        <tr>
-                            <th>Initiative</th>
-                            <td>${formatSigned(animal.init)}</td>
-                        </tr>
-                        <tr>
-                            <th>Armor Class</th>
-                            <td>${animal.armorclass}</td>
-                        </tr>
-                        <tr>
-                            <th>Reach</th>
-                            <td>${animal.reach} ft</td>
-                        </tr>
-                        <tr>
-                            <th>Grapple</th>
-                            <td>${formatSigned(animal.grapple)}</td>
-                        </tr>
-                        <tr>
-                            <th>Speeds</th>
-                            <td>
-                                ${animal.speeds.map(speed => `
-                                    <div>
-                                        ${speed.geography} ${speed.range} ft
-                                    </div>
-                                `).join("")}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Natural Weapons -->
-
-            <div class="detail-section">
-                <h3>Natural Weapons</h3>
-
-                <div class="attack-list">
-                    ${naturalWeapons || "<div>None</div>"}
+            <!-- HEADER -->
+            <header class="print-header">
+                <div class="print-name">
+                    ${escapeHtml(animal.name)}
                 </div>
-            </div>
 
-            <!-- Full Attack -->
-
-            <div class="detail-section">
-                <h3>Full Attack</h3>
-
-                <div class="attack-list">
-                    ${fullAttack || "None"}
+                <div class="print-size">
+                    ${escapeHtml(animal.size)}
                 </div>
-            </div>
+            </header>
 
-            <!-- Special Attacks -->
+            <!-- ABILITY SCORES -->
+            <section class="print-section">
+                <div class="print-abilities">
+                    ${abilities.map(([label, value]) => `
+                        <div class="print-ability">
+                            <div class="print-ability-label">
+                                ${label}
+                            </div>
 
-            <div class="detail-section">
-                <h3>Special Attacks</h3>
-
-                <div class="attack-list">
-                    ${specialAttacks || "None"}
+                            <div class="print-ability-value">
+                                ${value}
+                            </div>
+                        </div>
+                    `).join("")}
                 </div>
-            </div>
+            </section>
 
-            <!-- Notes -->
+            <!-- BASIC + SAVES -->
+            <section class="print-section">
 
-            <div class="detail-section notes">
-                <h3>Notes</h3>
-                ${animal.notes || "<p>None</p>"}
-            </div>
-        `;
+                <div class="print-combat">
 
-        details.classList.add("open");
-    }    
+                    <div class="print-combat-item">
+                        <div class="print-combat-label">AC</div>
+                        <div class="print-combat-value">
+                            ${animal.armorclass}
+                        </div>
+                    </div>
+
+                    <div class="print-combat-item">
+                        <div class="print-combat-label">INIT</div>
+                        <div class="print-combat-value">
+                            ${formatSigned(animal.init)}
+                        </div>
+                    </div>
+
+                    <div class="print-combat-item">
+                        <div class="print-combat-label">GRAP</div>
+                        <div class="print-combat-value">
+                            ${formatSigned(animal.grapple)}
+                        </div>
+                    </div>
+
+                    <div class="print-combat-item">
+                        <div class="print-combat-label">REACH</div>
+                        <div class="print-combat-value">
+                            ${animal.reach}
+                        </div>
+                    </div>
+
+                    <div class="print-combat-item">
+                        <div class="print-combat-label">FORT</div>
+                        <div class="print-combat-value">
+                            ${formatSigned(animal.saves.fortitude)}
+                        </div>
+                    </div>
+
+                    <div class="print-combat-item">
+                        <div class="print-combat-label">REF</div>
+                        <div class="print-combat-value">
+                            ${formatSigned(animal.saves.reflex)}
+                        </div>
+                    </div>
+
+                    <div class="print-combat-item">
+                        <div class="print-combat-label">WILL</div>
+                        <div class="print-combat-value">
+                            ${formatSigned(animal.saves.will)}
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="print-speed">
+                    <span class="print-speed-label">Speed:</span>
+                    ${escapeHtml(speeds)}
+                </div>
+
+            </section>
+
+            <!-- NATURAL WEAPONS -->
+            <section class="print-section">
+                <div class="print-section-title">
+                    NATURAL WEAPONS
+                </div>
+
+                <div class="print-lines">
+                    ${naturalWeapons}
+                </div>
+            </section>
+
+            <!-- FULL ATTACK -->
+            <section class="print-section compact">
+                <div class="print-section-title">
+                    FULL ATTACK
+                </div>
+
+                <div class="print-lines">
+                    ${escapeHtml(fullAttack)}
+                </div>
+            </section>
+
+            <!-- SPECIAL -->
+            <section class="print-section compact">
+                <div class="print-section-title">
+                    SPECIAL
+                </div>
+
+                <div class="print-lines">
+                    ${escapeHtml(specialAttacks)}
+                </div>
+            </section>
+
+        </article>
+    `;
+}
+
+function printSelected() {
+    const selected = getSelectedAnimals();
+
+    if (selected.length === 0) {
+        alert("Select at least one wild shape first.");
+        return;
+    }
+
+    renderPrintView();
 
     /*
-     * Events
+     * Let the browser render the print DOM before opening
+     * its native print dialog.
      */
+    requestAnimationFrame(() => {
+        window.print();
+    });
+}
 
-    document
-        .getElementById("search")
-        .addEventListener("input", applyFilters);
+/* ----------------------------------------------------------
+   Utility
+   ---------------------------------------------------------- */
 
-    document
-        .getElementById("size-filter")
-        .addEventListener("change", applyFilters);
+function escapeHtml(value) {
+    return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+}
 
-    document
-        .getElementById("type-filter")
-        .addEventListener("change", applyFilters);
+/* ----------------------------------------------------------
+   Events
+   ---------------------------------------------------------- */
 
-    document
-        .getElementById("allowed-filter")
-        .addEventListener("change", applyFilters);
+document
+    .getElementById("search")
+    .addEventListener("input", applyFilters);
 
+document
+    .getElementById("size-filter")
+    .addEventListener("change", applyFilters);
 
-    document
-        .querySelectorAll("th[data-sort]")
-        .forEach(header => {
+document
+    .getElementById("type-filter")
+    .addEventListener("change", applyFilters);
 
-            header.addEventListener("click", () => {
+document
+    .getElementById("allowed-filter")
+    .addEventListener("change", applyFilters);
 
-                const column = header.dataset.sort;
+document
+    .getElementById("clear-selection")
+    .addEventListener("click", clearSelection);
 
-                if (sortColumn === column) {
-                    sortAscending = !sortAscending;
-                } else {
-                    sortColumn = column;
-                    sortAscending = true;
-                }
+document
+    .getElementById("print-selected")
+    .addEventListener("click", printSelected);
 
-                sortAnimals();
-                renderTable();
-            });
-        });
-    
-    document
-        .querySelectorAll(".sort-button")
-        .forEach(button => {
+document
+    .querySelectorAll("th[data-sort]")
+    .forEach(header => {
+        header.addEventListener("click", () => {
+            const column = header.dataset.sort;
 
-            button.addEventListener("click", event => {
-
-                event.stopPropagation();
-
-                const column = button.dataset.sort;
-
-                if (sortColumn === column) {
-                    sortAscending = !sortAscending;
-                } else {
-                    sortColumn = column;
-                    sortAscending = false;
-                }
-
-                sortAnimals();
-                renderTable();
-            });
-        });
-
-        document.addEventListener("keydown", event => {
-            if (event.key === "Escape") {
-                closeDetails();
+            if (sortColumn === column) {
+                sortAscending = !sortAscending;
+            } else {
+                sortColumn = column;
+                sortAscending = true;
             }
+
+            sortAnimals();
+            renderTable();
         });
+    });
 
+document
+    .querySelectorAll(".sort-button")
+    .forEach(button => {
+        button.addEventListener("click", event => {
+            event.stopPropagation();
+
+            const column = button.dataset.sort;
+
+            if (sortColumn === column) {
+                sortAscending = !sortAscending;
+            } else {
+                sortColumn = column;
+                sortAscending = false;
+            }
+
+            sortAnimals();
+            renderTable();
+        });
+    });
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+        closeDetails();
+    }
+});
+
+window.addEventListener("afterprint", () => {
     /*
-     * Start
+     * Keep the print DOM around; it is harmless and makes
+     * repeated printing cheap. The normal UI automatically
+     * becomes visible again outside @media print.
      */
+});
 
-    loadAnimals();
+loadAnimals();
 </script>
 
 </body>

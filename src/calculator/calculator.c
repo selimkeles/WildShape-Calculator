@@ -2,6 +2,7 @@
 
 #include "creatures/creatures.h"
 #include "creatures/druid.h"
+#include "hero_specs.h"
 #include "specs/specs.h"
 
 #include <stddef.h>
@@ -16,16 +17,16 @@ const int druid_fort[] = {2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 1
 const int druid_ref[] = {0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6};
 const int druid_will[] = {2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 15};
 
-hero_stats_t hero = {druid_bab[HERO_DRUID_LV],
-                     druid_fort[HERO_DRUID_LV],
-                     druid_ref[HERO_DRUID_LV],
-                     druid_will[HERO_DRUID_LV],
-                     5,
-                     5,
-                     5,
-                     14,
-                     20,
-                     14};
+hero_stats_t hero = {druid_bab[DRUID_LV],
+                     druid_fort[DRUID_LV],
+                     druid_ref[DRUID_LV],
+                     druid_will[DRUID_LV],
+                     EXTRA_FORT,
+                     EXTRA_REF,
+                     EXTRA_WILL,
+                     HERO_INT,
+                     HERO_WIS,
+                     HERO_CHA};
 
 static void calculate_ability_modifiers(ability_scores_t *input, ability_modifier_t *output)
 {
@@ -150,31 +151,31 @@ static void calculate_attacks(animal_specs_t *animal, wildshape_form_t *ws_form)
 static void calculate_ws_allowance(animal_specs_t *animal, wildshape_form_t *ws_form)
 {
     ws_form->allowed = false;
-    if (animal->hd > HERO_DRUID_LV)
+    if (animal->hd > DRUID_LV)
     {
         return;
     }
-    else if (HERO_DRUID_LV < 12 && animal->type > TYPE_ANIMAL)
+    else if (DRUID_LV < 12 && animal->type > TYPE_ANIMAL)
     {
         return;
     }
-    else if (HERO_DRUID_LV < 16 && animal->type > TYPE_PLANT)
+    else if (DRUID_LV < 16 && animal->type > TYPE_PLANT)
     {
         return;
     }
-    else if (HERO_DRUID_LV < 20 && animal->type > TYPE_PLANT && animal->size > SIZE_LARGE)
+    else if (DRUID_LV < 20 && animal->type > TYPE_PLANT && animal->size > SIZE_LARGE)
     {
         return;
     }
-    else if (HERO_DRUID_LV < 9 && (animal->size < SIZE_SMALL || animal->size > SIZE_MEDIUM))
+    else if (DRUID_LV < 9 && (animal->size < SIZE_SMALL || animal->size > SIZE_MEDIUM))
     {
         return;
     }
-    else if (HERO_DRUID_LV < 11 && (animal->size < SIZE_SMALL || animal->size > SIZE_LARGE))
+    else if (DRUID_LV < 11 && (animal->size < SIZE_SMALL || animal->size > SIZE_LARGE))
     {
         return;
     }
-    else if (HERO_DRUID_LV < 15 && (animal->size < SIZE_TINY || animal->size > SIZE_LARGE))
+    else if (DRUID_LV < 15 && (animal->size < SIZE_TINY || animal->size > SIZE_LARGE))
     {
         return;
     }

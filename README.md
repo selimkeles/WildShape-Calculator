@@ -1,143 +1,123 @@
-# C/C++ Project Template
+# WildShape Calculator
 
-A CMake preset-based C/C++ project template for VSCode with clangd IntelliSense, Unity unit testing, and Ninja builds.
+A C and browser tool for generating Dungeons & Dragons 3.5 wild shape forms.
 
----
+Configure the druid in [`src/hero_specs.h`](src/hero_specs.h). The C program combines those settings with the creature catalog, calculates the resulting combat statistics, and writes `wildshape.json`. The browser UI in [`index.html`](index.html) reads that generated file and provides a searchable table, detailed stat views, and a printable cheat sheet that can be saved as PDF.
+
+> This is an unofficial fan project. It is not affiliated with or endorsed by Wizards of the Coast. See [License](#license) for the scope of the code and game-data licenses.
+
+## Screenshots
+
+### Wild shape table
+
+![Wild shape forms table](Examle_Table.png)
+
+### Printable cheat sheet
+
+![Wild shape printable cheat sheet](Example_CheatSheet.png)
+
+A generated example is available as [`CheatSheet.pdf`](CheatSheet.pdf).
+
+## Features
+
+- Calculates level-appropriate wild shape eligibility from hit dice, creature type, and size.
+- Calculates ability modifiers, initiative, base attack bonus, grapple, saving throws, movement, and natural, full, and special attacks.
+- Keeps the base creature data in the C catalog and exports the calculated forms to `wildshape.json`.
+- Provides a browser table with search, size/type/eligibility filters, sorting, and detailed form views.
+- Selects up to eight forms for a compact A4-landscape cheat sheet.
+- Prints directly from the browser or saves the selected forms as a PDF.
 
 ## Requirements
 
-### Windows
-| Tool | Purpose | PATH required |
-|---|---|---|
-| [LLVM](https://releases.llvm.org/) | clang, clang++, llvm-rc, clangd | Yes — add `LLVM/bin` |
-| [Ninja](https://ninja-build.org/) | Build system | Yes |
-| [CMake](https://cmake.org/) 3.20+ | Build configuration | Yes |
+- GNU Make
+- A C17 compiler, such as GCC or Clang
+- Git with the repository submodules initialized
+- Python 3, or another local static web server, for the browser UI
+- A modern browser with printing support
 
-### Linux
-| Tool | Purpose |
-|---|---|
-| `gcc`, `g++` | Compiler |
-| `ninja-build` | Build system |
-| `cmake` 3.20+ | Build configuration |
+## Quick start
+
+Initialize the submodules, build the calculator, and generate the JSON file:
 
 ```bash
-# Ubuntu/Debian
-sudo apt install gcc g++ ninja-build cmake
+git submodule update --init --recursive
+make
+make run
 ```
 
----
+`make run` prints the calculated forms and writes `wildshape.json` in the project root. The executable is also available at `build/bin/WildShapeCalculator`.
 
-## Project Structure
+Because `index.html` loads `wildshape.json` with `fetch()`, serve the project over HTTP rather than opening the file directly with a `file://` URL:
 
+```bash
+python3 -m http.server 8000
 ```
+
+Then open [`http://localhost:8000/index.html`](http://localhost:8000/index.html).
+
+## Configure the druid
+
+The calculator takes the character profile from [`src/hero_specs.h`](src/hero_specs.h):
+
+| Macro | Purpose |
+|---|---|
+| `DRUID_LV` | Druid level |
+| `HERO_INT` | Intelligence score |
+| `HERO_WIS` | Wisdom score |
+| `HERO_CHA` | Charisma score |
+| `EXTRA_FORT` | Additional Fortitude save bonus |
+| `EXTRA_REF` | Additional Reflex save bonus |
+| `EXTRA_WILL` | Additional Will save bonus |
+
+These are compile-time settings. Change the values, run `make run` again, and refresh the browser to regenerate the results.
+
+## Browser and PDF workflow
+
+1. Run the calculator with `make run` so `wildshape.json` is current.
+2. Serve the repository and open `index.html`.
+3. Search or filter the table, then click a row to inspect its full statistics and notes.
+4. Use the `PDF` checkboxes to select up to eight forms.
+5. Click **Print Selected**.
+6. In the browser print dialog, choose **Save as PDF** to keep a copy of the cheat sheet.
+
+The print layout is designed for A4 landscape paper and arranges the selected forms in a four-column, two-row grid.
+
+## Build and test
+
+```bash
+make            # build build/bin/WildShapeCalculator
+make -j4        # parallel build
+make test       # build and run the Unity tests
+make test-build # build the test binary only
+make clean      # remove build artifacts
+```
+
+The test executable is `build/bin/test_WildShapeCalculator`. The repository uses GNU Make rather than the old CMake template workflow.
+
+## Project layout
+
+```text
 .
-├── src/                        # Source files — headers live next to sources
-│   └── MyModule/
-│       ├── myModule.h
-│       └── myModule.cpp
-├── tests/
-│   ├── unity/                  # Unity test framework (submodule)
-│   ├── unit/                   # Unit test files
-│   │   └── test_myModule.cpp
-│   ├── CMakeLists.txt
-│   └── test.c                  # Test runner entry point
-├── .vscode/
-│   ├── settings.json           # clangd + cmake-tools config
-│   ├── launch.json             # Debug config (cppvsdbg)
-│   └── c-cpp.code-snippets     # Project snippets
-├── CMakeLists.txt
-├── CMakePresets.json
-├── .clang-format
-└── .clangd
+├── src/
+│   ├── hero_specs.h       # Druid level, scores, and extra saves
+│   ├── calculator/        # Wild shape stat calculations
+│   ├── creatures/         # Creature catalog and data types
+│   ├── json/              # JSON export support
+│   ├── table/             # Text output support
+│   └── main.c             # Program entry point
+├── tests/                 # Unity test runner and tests
+├── index.html             # Browser table and print interface
+├── wildshape.json         # Generated calculator output
+├── Makefile               # Build and test targets
+├── Examle_Table.png       # Table screenshot
+├── Example_CheatSheet.png # Cheat-sheet screenshot
+└── CheatSheet.pdf         # Sample generated PDF
 ```
-
----
-
-## Build
-
-### Configure
-
-```bash
-# Windows
-cmake --preset windows-clang-debug
-
-# Linux
-cmake --preset linux-gcc-debug
-```
-
-### Build
-
-```bash
-# Windows
-cmake --build --preset windows-clang-debug
-
-# Linux
-cmake --build --preset linux-gcc-debug
-```
-
-### Available presets
-
-| Preset | OS | Compiler | Type |
-|---|---|---|---|
-| `windows-clang-debug` | Windows | clang | Debug |
-| `windows-clang-release` | Windows | clang | Release |
-| `linux-gcc-debug` | Linux | gcc | Debug |
-| `linux-gcc-release` | Linux | gcc | Release |
-
-> In VSCode, select the preset from the cmake-tools status bar and click **Configure**, then **Build**.
-
----
-
-## Test
-
-```bash
-ctest --preset windows-clang-debug
-ctest --preset linux-gcc-debug
-```
-
-Tests are built as separate executables using the [Unity](https://github.com/ThrowTheSwitch/Unity) framework.
-
-To add a test see [CONTRIBUTING.md](CONTRIBUTING.md).
-
----
-
-## Debug
-
-Debugging is configured via `launch.json` using `cppvsdbg` (Windows) or `gdb` (Linux).
-
-In VSCode: set a breakpoint → press `F5` or use the cmake-tools debug button in the status bar.
-
----
-
-## IntelliSense
-
-IntelliSense is provided by **clangd** (not the built-in cpptools engine).
-
-clangd reads `compile_commands.json` from the workspace root. This file is generated automatically by cmake-tools after each configure. It is gitignored — each developer generates their own.
-
-If squiggles appear after adding new files, run **CMake: Configure** to regenerate it.
-
----
-
-## Snippets
-
-Type the prefix in any `.c` or `.cpp` file and press `Tab`.
-
-| Prefix | Expands to |
-|---|---|
-| `guard` | Include guard using filename |
-| `cls` | C++ class skeleton |
-| `str` | C typedef struct |
-| `enm` | `enum class` with underlying type |
-| `extc` | `extern "C"` block for C/C++ compatible headers |
-| `fori` | Index-based `for` loop |
-| `forr` | Range-based `for` loop (C++) |
-| `sw` | `switch` statement |
-| `todo` | `// TODO:` comment |
-| `banner` | Section separator comment |
-
----
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+The project code is released under the MIT License. See [`LICENSE`](LICENSE).
+
+The bundled creature statistics and descriptive game data are derived from the D&D 3.5 System Reference Document and are Open Game Content made available under the [Open Game License Version 1.0a](https://d20.odk.com/SRD/legal.html). Preserve the license and its attribution/copyright notice when redistributing that Open Game Content.
+
+The Open Game License does not grant rights to Product Identity or trademarks. Dungeons & Dragons, D&D, and related names and marks remain the property of their respective owners.
