@@ -13,7 +13,7 @@ src/
     └── myModule.cpp
 ```
 
-CMake automatically picks up all sources under `src/` via `file(GLOB_RECURSE ...)` in the root `CMakeLists.txt`, so no CMake changes are needed when adding a new module.
+The Makefile automatically picks up all sources under `src/` via recursive discovery, so no Makefile changes are needed when adding a new module.
 
 ---
 
@@ -69,24 +69,14 @@ int main(void)
 }
 ```
 
-**2. Register it** in `tests/CMakeLists.txt`:
+**2. Register it** in `tests/test.c` by running it from `main()` alongside the other tests.
 
-```cmake
-set(UNITY_SRC ${CMAKE_CURRENT_SOURCE_DIR}/unity/src/unity.c)
-
-add_unit_test(test_myModule
-    ${CMAKE_CURRENT_SOURCE_DIR}/unit/test_myModule.cpp
-    ${UNITY_SRC}
-)
-```
-
-The `add_unit_test` function automatically links all `src/` files (except `main`) and sets include paths, so your module's header is available as `#include "MyModule/myModule.h"`.
+The test binary links all `src/` files (except `main`) automatically and has `src/` and `tests/unity/src` on the include path, so your module's header is available as `#include "MyModule/myModule.h"`.
 
 **3. Run tests:**
 
 ```bash
-ctest --preset windows-clang-debug --output-on-failure
-ctest --preset linux-gcc-debug     --output-on-failure
+make test
 ```
 
 ---
@@ -116,7 +106,7 @@ Use the imperative mood, present tense:
 ```
 Add circular buffer module
 Fix off-by-one in tick() transition logic
-Update CMakePresets for clang on Windows
+Add clang override target to the Makefile
 ```
 
 Keep the subject line under 72 characters. Add a body if the change needs explanation.
