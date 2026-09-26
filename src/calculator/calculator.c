@@ -12,10 +12,10 @@ const int attack_mod_size[] = {8, 4, 2, 1, 0, -1, -2, -4, -8};
 const int grapple_mod_size[] = {-16, -12, -8, -4, 0, 4, 8, 12, 16};
 
 // Druid level change
-const int druid_bab[] = {0, 1, 2, 3, 3, 4, 5, 6, 6, 7, 8, 9, 9, 10, 11, 12, 12, 13, 14, 15};
-const int druid_fort[] = {2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 15};
-const int druid_ref[] = {0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6};
-const int druid_will[] = {2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 15};
+const int druid_bab[] = {0, 0, 1, 2, 3, 3, 4, 5, 6, 6, 7, 8, 9, 9, 10, 11, 12, 12, 13, 14, 15};
+const int druid_fort[] = {0, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12};
+const int druid_ref[] = {0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6};
+const int druid_will[] = {0, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12};
 
 hero_stats_t hero = {druid_bab[DRUID_LV],
                      druid_fort[DRUID_LV],

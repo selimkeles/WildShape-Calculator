@@ -7,10 +7,10 @@
       "hd": 7,
       "type": "Animal",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 16,
       "reach": 10,
-      "grapple": 23,
+      "grapple": 22,
       "ability_scores": {
         "strength": 27,
         "dexterity": 12,
@@ -20,9 +20,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 16,
+        "fortitude": 15,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -37,7 +37,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 13,
+            "attack_bonus": 12,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 8
@@ -45,7 +45,7 @@
           {
             "type": "Tail Slap",
             "role": "Primary",
-            "attack_bonus": 13,
+            "attack_bonus": 12,
             "dice_count": 1,
             "dice_sides": 12,
             "damage_bonus": 8
@@ -67,10 +67,10 @@
       "hd": 11,
       "type": "Animal",
       "init": 0,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 10,
-      "grapple": 25,
+      "grapple": 24,
       "ability_scores": {
         "strength": 30,
         "dexterity": 10,
@@ -80,9 +80,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 17,
+        "fortitude": 16,
         "reflex": 8,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -93,7 +93,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 15,
+            "attack_bonus": 14,
             "dice_count": 2,
             "dice_sides": 6,
             "damage_bonus": 10
@@ -101,7 +101,7 @@
           {
             "type": "Stamp",
             "role": "Secondary",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 2,
             "dice_sides": 6,
             "damage_bonus": 5
@@ -109,7 +109,7 @@
           {
             "type": "Gore",
             "role": "Primary",
-            "attack_bonus": 15,
+            "attack_bonus": 14,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 10
@@ -139,10 +139,10 @@
       "hd": 10,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 10,
-      "grapple": 20,
+      "grapple": 19,
       "ability_scores": {
         "strength": 21,
         "dexterity": 15,
@@ -152,9 +152,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Swim",
@@ -165,7 +165,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 2,
             "dice_sides": 6,
             "damage_bonus": 5
@@ -183,10 +183,10 @@
       "hd": 11,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 10,
-      "grapple": 22,
+      "grapple": 21,
       "ability_scores": {
         "strength": 25,
         "dexterity": 17,
@@ -196,9 +196,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -217,7 +217,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 12,
+            "attack_bonus": 11,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 7
@@ -251,10 +251,10 @@
       "hd": 6,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 10,
-      "grapple": 18,
+      "grapple": 17,
       "ability_scores": {
         "strength": 16,
         "dexterity": 15,
@@ -264,9 +264,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -285,7 +285,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 3
@@ -307,10 +307,10 @@
       "hd": 12,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 17,
       "reach": 15,
-      "grapple": 23,
+      "grapple": 22,
       "ability_scores": {
         "strength": 26,
         "dexterity": 17,
@@ -320,9 +320,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Swim",
@@ -333,7 +333,7 @@
         "natural_weapons": [{
             "type": "Tentacle",
             "role": "Primary",
-            "attack_bonus": 13,
+            "attack_bonus": 12,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 8
@@ -341,7 +341,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 4
@@ -383,10 +383,10 @@
       "hd": 9,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 16,
       "reach": 10,
-      "grapple": 23,
+      "grapple": 22,
       "ability_scores": {
         "strength": 27,
         "dexterity": 15,
@@ -396,9 +396,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 17,
+        "fortitude": 16,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Swim",
@@ -409,7 +409,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 13,
+            "attack_bonus": 12,
             "dice_count": 2,
             "dice_sides": 6,
             "damage_bonus": 8
@@ -427,10 +427,10 @@
       "hd": 10,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 13,
       "reach": 10,
-      "grapple": 23,
+      "grapple": 22,
       "ability_scores": {
         "strength": 26,
         "dexterity": 14,
@@ -440,9 +440,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 18,
+        "fortitude": 17,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -457,7 +457,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 13,
+            "attack_bonus": 12,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 8
@@ -475,10 +475,10 @@
       "hd": 8,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 16,
       "reach": 10,
-      "grapple": 20,
+      "grapple": 19,
       "ability_scores": {
         "strength": 21,
         "dexterity": 15,
@@ -488,9 +488,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 17,
+        "fortitude": 16,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -501,7 +501,7 @@
         "natural_weapons": [{
             "type": "Talon",
             "role": "Primary",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 5
@@ -509,7 +509,7 @@
           {
             "type": "Claw",
             "role": "Secondary",
-            "attack_bonus": 5,
+            "attack_bonus": 4,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 2
@@ -517,7 +517,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 5,
+            "attack_bonus": 4,
             "dice_count": 2,
             "dice_sides": 6,
             "damage_bonus": 2
@@ -551,10 +551,10 @@
       "hd": 16,
       "type": "Animal",
       "init": 0,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 18,
       "reach": 10,
-      "grapple": 25,
+      "grapple": 24,
       "ability_scores": {
         "strength": 30,
         "dexterity": 9,
@@ -564,9 +564,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 19,
+        "fortitude": 18,
         "reflex": 8,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -577,7 +577,7 @@
         "natural_weapons": [{
             "type": "Gore",
             "role": "Primary",
-            "attack_bonus": 15,
+            "attack_bonus": 14,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 10
@@ -603,10 +603,10 @@
       "hd": 18,
       "type": "Animal",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 10,
-      "grapple": 24,
+      "grapple": 23,
       "ability_scores": {
         "strength": 28,
         "dexterity": 12,
@@ -616,9 +616,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 17,
+        "fortitude": 16,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -629,7 +629,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 14,
+            "attack_bonus": 13,
             "dice_count": 3,
             "dice_sides": 6,
             "damage_bonus": 9
@@ -655,10 +655,10 @@
       "hd": 18,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 17,
       "reach": 10,
-      "grapple": 21,
+      "grapple": 20,
       "ability_scores": {
         "strength": 23,
         "dexterity": 15,
@@ -668,9 +668,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Swim",
@@ -681,7 +681,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 11,
+            "attack_bonus": 10,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 6
@@ -707,10 +707,10 @@
       "hd": 4,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 10,
-      "grapple": 16,
+      "grapple": 15,
       "ability_scores": {
         "strength": 21,
         "dexterity": 15,
@@ -720,9 +720,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -737,7 +737,7 @@
         "natural_weapons": [{
             "type": "Claw",
             "role": "Primary",
-            "attack_bonus": 11,
+            "attack_bonus": 10,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 5
@@ -745,7 +745,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 6,
+            "attack_bonus": 5,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 2
@@ -771,10 +771,10 @@
       "hd": 6,
       "type": "Animal",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 19,
+      "grapple": 18,
       "ability_scores": {
         "strength": 27,
         "dexterity": 13,
@@ -784,9 +784,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 16,
+        "fortitude": 15,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -797,7 +797,7 @@
         "natural_weapons": [{
             "type": "Claw",
             "role": "Primary",
-            "attack_bonus": 14,
+            "attack_bonus": 13,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 8
@@ -805,7 +805,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 2,
             "dice_sides": 6,
             "damage_bonus": 4
@@ -835,10 +835,10 @@
       "hd": 8,
       "type": "Animal",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 19,
+      "grapple": 18,
       "ability_scores": {
         "strength": 27,
         "dexterity": 13,
@@ -848,9 +848,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 16,
+        "fortitude": 15,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -865,7 +865,7 @@
         "natural_weapons": [{
             "type": "Claw",
             "role": "Primary",
-            "attack_bonus": 14,
+            "attack_bonus": 13,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 8
@@ -873,7 +873,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 2,
             "dice_sides": 6,
             "damage_bonus": 4
@@ -903,10 +903,10 @@
       "hd": 5,
       "type": "Animal",
       "init": 0,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 13,
       "reach": 5,
-      "grapple": 17,
+      "grapple": 16,
       "ability_scores": {
         "strength": 22,
         "dexterity": 10,
@@ -916,9 +916,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 8,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -929,7 +929,7 @@
         "natural_weapons": [{
             "type": "Gore",
             "role": "Primary",
-            "attack_bonus": 12,
+            "attack_bonus": 11,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 6
@@ -947,10 +947,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 13,
       "reach": 5,
-      "grapple": 15,
+      "grapple": 14,
       "ability_scores": {
         "strength": 18,
         "dexterity": 16,
@@ -960,9 +960,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -973,7 +973,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 4
@@ -991,10 +991,10 @@
       "hd": 5,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 10,
-      "grapple": 17,
+      "grapple": 16,
       "ability_scores": {
         "strength": 22,
         "dexterity": 15,
@@ -1004,9 +1004,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -1021,7 +1021,7 @@
         "natural_weapons": [{
             "type": "Claw",
             "role": "Primary",
-            "attack_bonus": 12,
+            "attack_bonus": 11,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 6
@@ -1029,7 +1029,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 7,
+            "attack_bonus": 6,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 3
@@ -1037,7 +1037,7 @@
           {
             "type": "Rend",
             "role": "Special",
-            "attack_bonus": 12,
+            "attack_bonus": 11,
             "dice_count": 2,
             "dice_sides": 6,
             "damage_bonus": 6
@@ -1067,10 +1067,10 @@
       "hd": 4,
       "type": "Animal",
       "init": 6,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 20,
       "reach": 5,
-      "grapple": 14,
+      "grapple": 13,
       "ability_scores": {
         "strength": 17,
         "dexterity": 22,
@@ -1080,9 +1080,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 14,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -1097,7 +1097,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 3
@@ -1115,10 +1115,10 @@
       "hd": 12,
       "type": "Animal",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 17,
       "reach": 5,
-      "grapple": 21,
+      "grapple": 20,
       "ability_scores": {
         "strength": 31,
         "dexterity": 13,
@@ -1128,9 +1128,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 16,
+        "fortitude": 15,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -1141,7 +1141,7 @@
         "natural_weapons": [{
             "type": "Claw",
             "role": "Primary",
-            "attack_bonus": 16,
+            "attack_bonus": 15,
             "dice_count": 2,
             "dice_sides": 4,
             "damage_bonus": 10
@@ -1149,7 +1149,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 11,
+            "attack_bonus": 10,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 5
@@ -1179,10 +1179,10 @@
       "hd": 7,
       "type": "Animal",
       "init": 0,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 19,
+      "grapple": 18,
       "ability_scores": {
         "strength": 27,
         "dexterity": 10,
@@ -1192,9 +1192,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 8,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -1205,7 +1205,7 @@
         "natural_weapons": [{
             "type": "Gore",
             "role": "Primary",
-            "attack_bonus": 14,
+            "attack_bonus": 13,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 8
@@ -1227,10 +1227,10 @@
       "hd": 8,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 18,
+      "grapple": 17,
       "ability_scores": {
         "strength": 25,
         "dexterity": 15,
@@ -1240,9 +1240,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -1253,7 +1253,7 @@
         "natural_weapons": [{
             "type": "Claw",
             "role": "Primary",
-            "attack_bonus": 13,
+            "attack_bonus": 12,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 7
@@ -1261,7 +1261,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 3
@@ -1269,7 +1269,7 @@
           {
             "type": "Rake",
             "role": "Special",
-            "attack_bonus": 13,
+            "attack_bonus": 12,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 7
@@ -1307,10 +1307,10 @@
       "hd": 16,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 17,
       "reach": 5,
-      "grapple": 19,
+      "grapple": 18,
       "ability_scores": {
         "strength": 27,
         "dexterity": 15,
@@ -1320,9 +1320,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -1333,7 +1333,7 @@
         "natural_weapons": [{
             "type": "Claw",
             "role": "Primary",
-            "attack_bonus": 14,
+            "attack_bonus": 13,
             "dice_count": 2,
             "dice_sides": 4,
             "damage_bonus": 8
@@ -1341,7 +1341,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 2,
             "dice_sides": 6,
             "damage_bonus": 4
@@ -1349,7 +1349,7 @@
           {
             "type": "Rake",
             "role": "Special",
-            "attack_bonus": 14,
+            "attack_bonus": 13,
             "dice_count": 2,
             "dice_sides": 4,
             "damage_bonus": 8
@@ -1387,10 +1387,10 @@
       "hd": 6,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 5,
-      "grapple": 18,
+      "grapple": 17,
       "ability_scores": {
         "strength": 25,
         "dexterity": 15,
@@ -1400,9 +1400,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -1413,7 +1413,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 13,
+            "attack_bonus": 12,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 7
@@ -1435,10 +1435,10 @@
       "hd": 5,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 16,
       "reach": 5,
-      "grapple": 17,
+      "grapple": 16,
       "ability_scores": {
         "strength": 22,
         "dexterity": 17,
@@ -1448,9 +1448,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 16,
+        "fortitude": 15,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -1465,7 +1465,7 @@
         "natural_weapons": [{
             "type": "Claw",
             "role": "Primary",
-            "attack_bonus": 12,
+            "attack_bonus": 11,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 6
@@ -1473,7 +1473,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 7,
+            "attack_bonus": 6,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 3
@@ -1503,10 +1503,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 13,
       "reach": 5,
-      "grapple": 14,
+      "grapple": 13,
       "ability_scores": {
         "strength": 16,
         "dexterity": 13,
@@ -1516,9 +1516,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -1529,7 +1529,7 @@
         "natural_weapons": [{
             "type": "Hoof",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 3
@@ -1551,10 +1551,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 13,
       "reach": 5,
-      "grapple": 13,
+      "grapple": 12,
       "ability_scores": {
         "strength": 14,
         "dexterity": 13,
@@ -1564,9 +1564,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -1577,7 +1577,7 @@
         "natural_weapons": [{
             "type": "Hoof",
             "role": "Primary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 2
@@ -1599,10 +1599,10 @@
       "hd": 5,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 16,
+      "grapple": 15,
       "ability_scores": {
         "strength": 21,
         "dexterity": 17,
@@ -1612,9 +1612,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -1625,7 +1625,7 @@
         "natural_weapons": [{
             "type": "Claw",
             "role": "Primary",
-            "attack_bonus": 11,
+            "attack_bonus": 10,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 5
@@ -1633,7 +1633,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 6,
+            "attack_bonus": 5,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 2
@@ -1641,7 +1641,7 @@
           {
             "type": "Rake",
             "role": "Special",
-            "attack_bonus": 11,
+            "attack_bonus": 10,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 5
@@ -1679,10 +1679,10 @@
       "hd": 4,
       "type": "Animal",
       "init": 0,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 12,
       "reach": 5,
-      "grapple": 13,
+      "grapple": 12,
       "ability_scores": {
         "strength": 15,
         "dexterity": 11,
@@ -1692,9 +1692,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 8,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Swim",
@@ -1705,7 +1705,7 @@
         "natural_weapons": [{
             "type": "Ram",
             "role": "Primary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 2
@@ -1723,10 +1723,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 13,
       "reach": 5,
-      "grapple": 14,
+      "grapple": 13,
       "ability_scores": {
         "strength": 16,
         "dexterity": 13,
@@ -1736,9 +1736,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -1749,7 +1749,7 @@
         "natural_weapons": [{
             "type": "Hoof",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 3
@@ -1771,10 +1771,10 @@
       "hd": 8,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 18,
       "reach": 10,
-      "grapple": 16,
+      "grapple": 15,
       "ability_scores": {
         "strength": 20,
         "dexterity": 15,
@@ -1784,9 +1784,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -1801,7 +1801,7 @@
         "natural_weapons": [{
             "type": "Tentacle",
             "role": "Primary",
-            "attack_bonus": 11,
+            "attack_bonus": 10,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 5
@@ -1809,7 +1809,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 6,
+            "attack_bonus": 5,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 2
@@ -1851,10 +1851,10 @@
       "hd": 8,
       "type": "Animal",
       "init": 0,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 16,
       "reach": 5,
-      "grapple": 19,
+      "grapple": 18,
       "ability_scores": {
         "strength": 26,
         "dexterity": 10,
@@ -1864,9 +1864,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 17,
+        "fortitude": 16,
         "reflex": 8,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -1877,7 +1877,7 @@
         "natural_weapons": [{
             "type": "Gore",
             "role": "Primary",
-            "attack_bonus": 14,
+            "attack_bonus": 13,
             "dice_count": 2,
             "dice_sides": 6,
             "damage_bonus": 8
@@ -1885,7 +1885,7 @@
           {
             "type": "Powerful Charge",
             "role": "Special",
-            "attack_bonus": 14,
+            "attack_bonus": 13,
             "dice_count": 4,
             "dice_sides": 6,
             "damage_bonus": 8
@@ -1907,10 +1907,10 @@
       "hd": 7,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 14,
+      "grapple": 13,
       "ability_scores": {
         "strength": 17,
         "dexterity": 15,
@@ -1920,9 +1920,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Swim",
@@ -1933,7 +1933,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 3
@@ -1951,10 +1951,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 11,
+      "grapple": 10,
       "ability_scores": {
         "strength": 10,
         "dexterity": 17,
@@ -1964,9 +1964,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -1981,7 +1981,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 6,
+            "attack_bonus": 5,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 0
@@ -2003,10 +2003,10 @@
       "hd": 6,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 5,
-      "grapple": 17,
+      "grapple": 16,
       "ability_scores": {
         "strength": 23,
         "dexterity": 15,
@@ -2016,9 +2016,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -2029,7 +2029,7 @@
         "natural_weapons": [{
             "type": "Claw",
             "role": "Primary",
-            "attack_bonus": 12,
+            "attack_bonus": 11,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 6
@@ -2037,7 +2037,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 7,
+            "attack_bonus": 6,
             "dice_count": 2,
             "dice_sides": 6,
             "damage_bonus": 3
@@ -2045,7 +2045,7 @@
           {
             "type": "Rake",
             "role": "Special",
-            "attack_bonus": 12,
+            "attack_bonus": 11,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 6
@@ -2083,10 +2083,10 @@
       "hd": 4,
       "type": "Animal",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 5,
-      "grapple": 15,
+      "grapple": 14,
       "ability_scores": {
         "strength": 18,
         "dexterity": 13,
@@ -2096,9 +2096,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -2109,7 +2109,7 @@
         "natural_weapons": [{
             "type": "Hoof",
             "role": "Primary",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 4
@@ -2117,7 +2117,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 5,
+            "attack_bonus": 4,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 2
@@ -2143,10 +2143,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 5,
-      "grapple": 14,
+      "grapple": 13,
       "ability_scores": {
         "strength": 16,
         "dexterity": 13,
@@ -2156,9 +2156,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -2169,7 +2169,7 @@
         "natural_weapons": [{
             "type": "Hoof",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 3
@@ -2177,7 +2177,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 4,
+            "attack_bonus": 3,
             "dice_count": 1,
             "dice_sides": 3,
             "damage_bonus": 1
@@ -2203,10 +2203,10 @@
       "hd": 1,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 13,
       "reach": 5,
-      "grapple": 9,
+      "grapple": 8,
       "ability_scores": {
         "strength": 15,
         "dexterity": 14,
@@ -2216,9 +2216,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -2233,7 +2233,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 2
@@ -2251,10 +2251,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 13,
       "reach": 5,
-      "grapple": 11,
+      "grapple": 10,
       "ability_scores": {
         "strength": 19,
         "dexterity": 13,
@@ -2264,9 +2264,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -2277,7 +2277,7 @@
         "natural_weapons": [{
             "type": "Claw",
             "role": "Primary",
-            "attack_bonus": 11,
+            "attack_bonus": 10,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 4
@@ -2285,7 +2285,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 6,
+            "attack_bonus": 5,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 2
@@ -2311,10 +2311,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 0,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 16,
       "reach": 5,
-      "grapple": 9,
+      "grapple": 8,
       "ability_scores": {
         "strength": 15,
         "dexterity": 10,
@@ -2324,9 +2324,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 8,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -2337,7 +2337,7 @@
         "natural_weapons": [{
             "type": "Gore",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 2
@@ -2359,10 +2359,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 4,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 10,
+      "grapple": 9,
       "ability_scores": {
         "strength": 16,
         "dexterity": 19,
@@ -2372,9 +2372,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 12,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -2385,7 +2385,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 3
@@ -2393,7 +2393,7 @@
           {
             "type": "Claw",
             "role": "Secondary",
-            "attack_bonus": 5,
+            "attack_bonus": 4,
             "dice_count": 1,
             "dice_sides": 2,
             "damage_bonus": 1
@@ -2423,10 +2423,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 11,
+      "grapple": 10,
       "ability_scores": {
         "strength": 19,
         "dexterity": 12,
@@ -2436,9 +2436,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -2453,7 +2453,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 11,
+            "attack_bonus": 10,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 4
@@ -2461,7 +2461,7 @@
           {
             "type": "Tail Slap",
             "role": "Primary",
-            "attack_bonus": 11,
+            "attack_bonus": 10,
             "dice_count": 1,
             "dice_sides": 12,
             "damage_bonus": 4
@@ -2483,10 +2483,10 @@
       "hd": 2,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 16,
       "reach": 5,
-      "grapple": 9,
+      "grapple": 8,
       "ability_scores": {
         "strength": 15,
         "dexterity": 15,
@@ -2496,9 +2496,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -2509,7 +2509,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 2
@@ -2527,10 +2527,10 @@
       "hd": 2,
       "type": "Animal",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 13,
       "reach": 5,
-      "grapple": 7,
+      "grapple": 6,
       "ability_scores": {
         "strength": 10,
         "dexterity": 13,
@@ -2540,9 +2540,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -2553,7 +2553,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 7,
+            "attack_bonus": 6,
             "dice_count": 1,
             "dice_sides": 2,
             "damage_bonus": 0
@@ -2571,10 +2571,10 @@
       "hd": 2,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 5,
-      "grapple": 9,
+      "grapple": 8,
       "ability_scores": {
         "strength": 14,
         "dexterity": 15,
@@ -2584,9 +2584,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -2597,7 +2597,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 2
@@ -2619,10 +2619,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 4,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 10,
+      "grapple": 9,
       "ability_scores": {
         "strength": 16,
         "dexterity": 19,
@@ -2632,9 +2632,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 12,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -2649,7 +2649,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 3
@@ -2657,7 +2657,7 @@
           {
             "type": "Claw",
             "role": "Secondary",
-            "attack_bonus": 5,
+            "attack_bonus": 4,
             "dice_count": 1,
             "dice_sides": 3,
             "damage_bonus": 1
@@ -2665,7 +2665,7 @@
           {
             "type": "Rake",
             "role": "Special",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 1,
             "dice_sides": 3,
             "damage_bonus": 3
@@ -2703,10 +2703,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 10,
+      "grapple": 9,
       "ability_scores": {
         "strength": 17,
         "dexterity": 15,
@@ -2716,9 +2716,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -2733,7 +2733,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 3
@@ -2751,10 +2751,10 @@
       "hd": 2,
       "type": "Animal",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 13,
       "reach": 5,
-      "grapple": 8,
+      "grapple": 7,
       "ability_scores": {
         "strength": 13,
         "dexterity": 13,
@@ -2764,9 +2764,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -2777,7 +2777,7 @@
         "natural_weapons": [{
             "type": "Hoof",
             "role": "Primary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 1,
             "dice_sides": 3,
             "damage_bonus": 1
@@ -2799,10 +2799,10 @@
       "hd": 2,
       "type": "Animal",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 13,
       "reach": 5,
-      "grapple": 9,
+      "grapple": 8,
       "ability_scores": {
         "strength": 15,
         "dexterity": 13,
@@ -2812,9 +2812,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -2825,7 +2825,7 @@
         "natural_weapons": [{
             "type": "Hoof",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 3,
             "damage_bonus": 2
@@ -2847,10 +2847,10 @@
       "hd": 2,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 7,
+      "grapple": 6,
       "ability_scores": {
         "strength": 11,
         "dexterity": 17,
@@ -2860,9 +2860,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Swim",
@@ -2873,7 +2873,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 7,
+            "attack_bonus": 6,
             "dice_count": 2,
             "dice_sides": 4,
             "damage_bonus": 0
@@ -2891,10 +2891,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 8,
+      "grapple": 7,
       "ability_scores": {
         "strength": 13,
         "dexterity": 15,
@@ -2904,9 +2904,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Swim",
@@ -2917,7 +2917,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 1
@@ -2935,10 +2935,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 10,
+      "grapple": 9,
       "ability_scores": {
         "strength": 17,
         "dexterity": 17,
@@ -2948,9 +2948,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -2969,7 +2969,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 1,
             "dice_sides": 3,
             "damage_bonus": 3
@@ -3003,10 +3003,10 @@
       "hd": 2,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 16,
       "reach": 5,
-      "grapple": 6,
+      "grapple": 5,
       "ability_scores": {
         "strength": 8,
         "dexterity": 17,
@@ -3016,9 +3016,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -3037,7 +3037,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 6,
+            "attack_bonus": 5,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": -1
@@ -3059,10 +3059,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 16,
       "reach": 5,
-      "grapple": 9,
+      "grapple": 8,
       "ability_scores": {
         "strength": 14,
         "dexterity": 17,
@@ -3072,9 +3072,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Swim",
@@ -3085,7 +3085,7 @@
         "natural_weapons": [{
             "type": "Arms",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 0,
             "dice_sides": 0,
             "damage_bonus": 2
@@ -3093,7 +3093,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 4,
+            "attack_bonus": 3,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 1
@@ -3123,10 +3123,10 @@
       "hd": 2,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 5,
-      "grapple": 8,
+      "grapple": 7,
       "ability_scores": {
         "strength": 13,
         "dexterity": 15,
@@ -3136,9 +3136,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -3149,7 +3149,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 1
@@ -3171,10 +3171,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 5,
-      "grapple": 9,
+      "grapple": 8,
       "ability_scores": {
         "strength": 14,
         "dexterity": 15,
@@ -3184,9 +3184,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 16,
+        "fortitude": 15,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -3205,7 +3205,7 @@
         "natural_weapons": [{
             "type": "Claw",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 2
@@ -3213,7 +3213,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 4,
+            "attack_bonus": 3,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 1
@@ -3243,10 +3243,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 16,
       "reach": 5,
-      "grapple": 9,
+      "grapple": 8,
       "ability_scores": {
         "strength": 14,
         "dexterity": 17,
@@ -3256,9 +3256,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 16,
+        "fortitude": 15,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -3273,7 +3273,7 @@
         "natural_weapons": [{
             "type": "Claw",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 2
@@ -3281,7 +3281,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 4,
+            "attack_bonus": 3,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 1
@@ -3311,10 +3311,10 @@
       "hd": 3,
       "type": "Animal",
       "init": 4,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 16,
       "reach": 5,
-      "grapple": 9,
+      "grapple": 8,
       "ability_scores": {
         "strength": 14,
         "dexterity": 19,
@@ -3324,9 +3324,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 12,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -3337,7 +3337,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 2
@@ -3363,10 +3363,10 @@
       "hd": 1,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 2,
+      "grapple": 1,
       "ability_scores": {
         "strength": 8,
         "dexterity": 17,
@@ -3376,9 +3376,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -3393,7 +3393,7 @@
         "natural_weapons": [{
             "type": "Claw",
             "role": "Primary",
-            "attack_bonus": 7,
+            "attack_bonus": 6,
             "dice_count": 1,
             "dice_sides": 2,
             "damage_bonus": -1
@@ -3401,7 +3401,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 2,
+            "attack_bonus": 1,
             "dice_count": 1,
             "dice_sides": 3,
             "damage_bonus": 0
@@ -3431,10 +3431,10 @@
       "hd": 1,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 4,
+      "grapple": 3,
       "ability_scores": {
         "strength": 13,
         "dexterity": 17,
@@ -3444,9 +3444,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -3457,7 +3457,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 1
@@ -3475,10 +3475,10 @@
       "hd": 1,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 5,
-      "grapple": 3,
+      "grapple": 2,
       "ability_scores": {
         "strength": 10,
         "dexterity": 15,
@@ -3488,9 +3488,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -3505,7 +3505,7 @@
         "natural_weapons": [{
             "type": "Talon",
             "role": "Primary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 0
@@ -3513,7 +3513,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 3,
+            "attack_bonus": 2,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 0
@@ -3539,10 +3539,10 @@
       "hd": 2,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 16,
       "reach": 5,
-      "grapple": 4,
+      "grapple": 3,
       "ability_scores": {
         "strength": 12,
         "dexterity": 17,
@@ -3552,9 +3552,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -3569,7 +3569,7 @@
         "natural_weapons": [{
             "type": "Arms",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 0,
             "dice_sides": 0,
             "damage_bonus": 1
@@ -3577,7 +3577,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 4,
+            "attack_bonus": 3,
             "dice_count": 1,
             "dice_sides": 3,
             "damage_bonus": 0
@@ -3607,10 +3607,10 @@
       "hd": 1,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 17,
       "reach": 5,
-      "grapple": 1,
+      "grapple": 0,
       "ability_scores": {
         "strength": 6,
         "dexterity": 17,
@@ -3620,9 +3620,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -3641,7 +3641,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 6,
+            "attack_bonus": 5,
             "dice_count": 1,
             "dice_sides": 2,
             "damage_bonus": -2
@@ -3663,10 +3663,10 @@
       "hd": 1,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 3,
+      "grapple": 2,
       "ability_scores": {
         "strength": 10,
         "dexterity": 17,
@@ -3676,9 +3676,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -3693,7 +3693,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 0
@@ -3715,10 +3715,10 @@
       "hd": 1,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 0,
-      "grapple": -4,
+      "grapple": -5,
       "ability_scores": {
         "strength": 3,
         "dexterity": 15,
@@ -3728,9 +3728,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -3741,7 +3741,7 @@
         "natural_weapons": [{
             "type": "Claw",
             "role": "Primary",
-            "attack_bonus": 6,
+            "attack_bonus": 5,
             "dice_count": 1,
             "dice_sides": 2,
             "damage_bonus": -3
@@ -3749,7 +3749,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 1,
+            "attack_bonus": 0,
             "dice_count": 1,
             "dice_sides": 3,
             "damage_bonus": -1
@@ -3775,10 +3775,10 @@
       "hd": 1,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 17,
       "reach": 0,
-      "grapple": -3,
+      "grapple": -4,
       "ability_scores": {
         "strength": 6,
         "dexterity": 17,
@@ -3788,9 +3788,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -3805,7 +3805,7 @@
         "natural_weapons": [{
             "type": "Talon",
             "role": "Primary",
-            "attack_bonus": 7,
+            "attack_bonus": 6,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": -2
@@ -3823,10 +3823,10 @@
       "hd": 1,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 0,
-      "grapple": -4,
+      "grapple": -5,
       "ability_scores": {
         "strength": 3,
         "dexterity": 15,
@@ -3836,9 +3836,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -3853,7 +3853,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 6,
+            "attack_bonus": 5,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": -3
@@ -3871,10 +3871,10 @@
       "hd": 1,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 0,
-      "grapple": -4,
+      "grapple": -5,
       "ability_scores": {
         "strength": 3,
         "dexterity": 15,
@@ -3884,9 +3884,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -3901,7 +3901,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 6,
+            "attack_bonus": 5,
             "dice_count": 1,
             "dice_sides": 3,
             "damage_bonus": -3
@@ -3919,10 +3919,10 @@
       "hd": 1,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 17,
       "reach": 0,
-      "grapple": -4,
+      "grapple": -5,
       "ability_scores": {
         "strength": 4,
         "dexterity": 17,
@@ -3932,9 +3932,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -3949,7 +3949,7 @@
         "natural_weapons": [{
             "type": "Talon",
             "role": "Primary",
-            "attack_bonus": 6,
+            "attack_bonus": 5,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": -3
@@ -3967,10 +3967,10 @@
       "hd": 1,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 0,
-      "grapple": -5,
+      "grapple": -6,
       "ability_scores": {
         "strength": 2,
         "dexterity": 15,
@@ -3980,9 +3980,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -4001,7 +4001,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 5,
+            "attack_bonus": 4,
             "dice_count": 1,
             "dice_sides": 3,
             "damage_bonus": -4
@@ -4019,10 +4019,10 @@
       "hd": 1,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 0,
-      "grapple": -5,
+      "grapple": -6,
       "ability_scores": {
         "strength": 1,
         "dexterity": 15,
@@ -4032,9 +4032,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -4049,7 +4049,7 @@
         "natural_weapons": [{
             "type": "Claw",
             "role": "Primary",
-            "attack_bonus": 5,
+            "attack_bonus": 4,
             "dice_count": 1,
             "dice_sides": 2,
             "damage_bonus": -4
@@ -4067,10 +4067,10 @@
       "hd": 1,
       "type": "Animal",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 17,
       "reach": 0,
-      "grapple": -4,
+      "grapple": -5,
       "ability_scores": {
         "strength": 4,
         "dexterity": 17,
@@ -4080,9 +4080,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -4101,7 +4101,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 6,
+            "attack_bonus": 5,
             "dice_count": 1,
             "dice_sides": 1,
             "damage_bonus": -3
@@ -4123,10 +4123,10 @@
       "hd": 1,
       "type": "Animal",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 0,
-      "grapple": -4,
+      "grapple": -5,
       "ability_scores": {
         "strength": 3,
         "dexterity": 15,
@@ -4136,9 +4136,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -4153,7 +4153,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 6,
+            "attack_bonus": 5,
             "dice_count": 1,
             "dice_sides": 3,
             "damage_bonus": -3
@@ -4175,10 +4175,10 @@
       "hd": 2,
       "type": "Plant",
       "init": -5,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 8,
       "reach": 0,
-      "grapple": 2,
+      "grapple": 1,
       "ability_scores": {
         "strength": 0,
         "dexterity": 0,
@@ -4188,9 +4188,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 3,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -4215,10 +4215,10 @@
       "hd": 2,
       "type": "Plant",
       "init": -1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 13,
       "reach": 10,
-      "grapple": 9,
+      "grapple": 8,
       "ability_scores": {
         "strength": 14,
         "dexterity": 8,
@@ -4228,9 +4228,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 7,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -4241,7 +4241,7 @@
         "natural_weapons": [{
             "type": "Tentacle",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 2
@@ -4267,10 +4267,10 @@
       "hd": 4,
       "type": "Plant",
       "init": 0,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 10,
-      "grapple": 16,
+      "grapple": 15,
       "ability_scores": {
         "strength": 20,
         "dexterity": 10,
@@ -4280,9 +4280,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 8,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -4293,7 +4293,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 11,
+            "attack_bonus": 10,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 5
@@ -4331,10 +4331,10 @@
       "hd": 2,
       "type": "Plant",
       "init": 0,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 14,
       "reach": 5,
-      "grapple": 9,
+      "grapple": 8,
       "ability_scores": {
         "strength": 14,
         "dexterity": 10,
@@ -4344,9 +4344,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 8,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -4357,7 +4357,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 2
@@ -4375,10 +4375,10 @@
       "hd": 8,
       "type": "Plant",
       "init": 0,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 20,
       "reach": 10,
-      "grapple": 16,
+      "grapple": 15,
       "ability_scores": {
         "strength": 21,
         "dexterity": 10,
@@ -4388,9 +4388,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 8,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -4405,7 +4405,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 11,
+            "attack_bonus": 10,
             "dice_count": 2,
             "dice_sides": 6,
             "damage_bonus": 5
@@ -4443,10 +4443,10 @@
       "hd": 9,
       "type": "Plant",
       "init": 0,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 16,
       "reach": 15,
-      "grapple": 24,
+      "grapple": 23,
       "ability_scores": {
         "strength": 28,
         "dexterity": 9,
@@ -4456,9 +4456,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 18,
+        "fortitude": 17,
         "reflex": 8,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -4469,7 +4469,7 @@
         "natural_weapons": [{
             "type": "Bite",
             "role": "Primary",
-            "attack_bonus": 14,
+            "attack_bonus": 13,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 9
@@ -4477,7 +4477,7 @@
           {
             "type": "Tentacle",
             "role": "Secondary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 4
@@ -4515,10 +4515,10 @@
       "hd": 7,
       "type": "Plant",
       "init": -1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 20,
       "reach": 15,
-      "grapple": 24,
+      "grapple": 23,
       "ability_scores": {
         "strength": 29,
         "dexterity": 8,
@@ -4528,9 +4528,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 17,
+        "fortitude": 16,
         "reflex": 7,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -4541,7 +4541,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 14,
+            "attack_bonus": 13,
             "dice_count": 2,
             "dice_sides": 6,
             "damage_bonus": 9
@@ -4567,10 +4567,10 @@
       "hd": 2,
       "type": "Elemental",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 17,
       "reach": 5,
-      "grapple": 3,
+      "grapple": 2,
       "ability_scores": {
         "strength": 10,
         "dexterity": 17,
@@ -4580,9 +4580,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Fly (Perfect)",
@@ -4593,7 +4593,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 0
@@ -4615,10 +4615,10 @@
       "hd": 4,
       "type": "Elemental",
       "init": 5,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 18,
       "reach": 5,
-      "grapple": 8,
+      "grapple": 7,
       "ability_scores": {
         "strength": 12,
         "dexterity": 21,
@@ -4628,9 +4628,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 13,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Fly (Perfect)",
@@ -4641,7 +4641,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 1
@@ -4663,10 +4663,10 @@
       "hd": 8,
       "type": "Elemental",
       "init": 7,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 20,
       "reach": 10,
-      "grapple": 13,
+      "grapple": 12,
       "ability_scores": {
         "strength": 14,
         "dexterity": 25,
@@ -4676,9 +4676,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 15,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Fly (Perfect)",
@@ -4689,7 +4689,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 2,
             "dice_sides": 6,
             "damage_bonus": 2
@@ -4715,10 +4715,10 @@
       "hd": 16,
       "type": "Elemental",
       "init": 9,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 21,
       "reach": 15,
-      "grapple": 19,
+      "grapple": 18,
       "ability_scores": {
         "strength": 18,
         "dexterity": 29,
@@ -4728,9 +4728,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 16,
+        "fortitude": 15,
         "reflex": 17,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Fly (Perfect)",
@@ -4741,7 +4741,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 4
@@ -4767,10 +4767,10 @@
       "hd": 21,
       "type": "Elemental",
       "init": 10,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 26,
       "reach": 15,
-      "grapple": 20,
+      "grapple": 19,
       "ability_scores": {
         "strength": 20,
         "dexterity": 31,
@@ -4780,9 +4780,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 16,
+        "fortitude": 15,
         "reflex": 18,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Fly (Perfect)",
@@ -4793,7 +4793,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 5
@@ -4819,10 +4819,10 @@
       "hd": 24,
       "type": "Elemental",
       "init": 11,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 27,
       "reach": 15,
-      "grapple": 21,
+      "grapple": 20,
       "ability_scores": {
         "strength": 22,
         "dexterity": 33,
@@ -4832,9 +4832,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 16,
+        "fortitude": 15,
         "reflex": 19,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Fly (Perfect)",
@@ -4845,7 +4845,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 11,
+            "attack_bonus": 10,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 6
@@ -4871,10 +4871,10 @@
       "hd": 2,
       "type": "Elemental",
       "init": -1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 17,
       "reach": 5,
-      "grapple": 6,
+      "grapple": 5,
       "ability_scores": {
         "strength": 17,
         "dexterity": 8,
@@ -4884,9 +4884,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 7,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -4897,7 +4897,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 11,
+            "attack_bonus": 10,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 3
@@ -4919,10 +4919,10 @@
       "hd": 4,
       "type": "Elemental",
       "init": -1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 18,
       "reach": 5,
-      "grapple": 12,
+      "grapple": 11,
       "ability_scores": {
         "strength": 21,
         "dexterity": 8,
@@ -4932,9 +4932,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 7,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -4945,7 +4945,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 12,
+            "attack_bonus": 11,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 5
@@ -4967,10 +4967,10 @@
       "hd": 8,
       "type": "Elemental",
       "init": -1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 18,
       "reach": 10,
-      "grapple": 18,
+      "grapple": 17,
       "ability_scores": {
         "strength": 25,
         "dexterity": 8,
@@ -4980,9 +4980,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 16,
+        "fortitude": 15,
         "reflex": 7,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -4993,7 +4993,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 13,
+            "attack_bonus": 12,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 7
@@ -5019,10 +5019,10 @@
       "hd": 16,
       "type": "Elemental",
       "init": -1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 18,
       "reach": 15,
-      "grapple": 24,
+      "grapple": 23,
       "ability_scores": {
         "strength": 29,
         "dexterity": 8,
@@ -5032,9 +5032,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 17,
+        "fortitude": 16,
         "reflex": 7,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5045,7 +5045,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 14,
+            "attack_bonus": 13,
             "dice_count": 2,
             "dice_sides": 10,
             "damage_bonus": 9
@@ -5071,10 +5071,10 @@
       "hd": 21,
       "type": "Elemental",
       "init": -1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 20,
       "reach": 15,
-      "grapple": 25,
+      "grapple": 24,
       "ability_scores": {
         "strength": 31,
         "dexterity": 8,
@@ -5084,9 +5084,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 17,
+        "fortitude": 16,
         "reflex": 7,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5097,7 +5097,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 15,
+            "attack_bonus": 14,
             "dice_count": 2,
             "dice_sides": 10,
             "damage_bonus": 10
@@ -5123,10 +5123,10 @@
       "hd": 24,
       "type": "Elemental",
       "init": -1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 22,
       "reach": 15,
-      "grapple": 26,
+      "grapple": 25,
       "ability_scores": {
         "strength": 33,
         "dexterity": 8,
@@ -5136,9 +5136,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 17,
+        "fortitude": 16,
         "reflex": 7,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5149,7 +5149,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 16,
+            "attack_bonus": 15,
             "dice_count": 2,
             "dice_sides": 10,
             "damage_bonus": 11
@@ -5175,10 +5175,10 @@
       "hd": 2,
       "type": "Elemental",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 15,
       "reach": 5,
-      "grapple": 3,
+      "grapple": 2,
       "ability_scores": {
         "strength": 10,
         "dexterity": 13,
@@ -5188,9 +5188,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 12,
+        "fortitude": 11,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5201,7 +5201,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 0
@@ -5223,10 +5223,10 @@
       "hd": 4,
       "type": "Elemental",
       "init": 3,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 16,
       "reach": 5,
-      "grapple": 8,
+      "grapple": 7,
       "ability_scores": {
         "strength": 12,
         "dexterity": 17,
@@ -5236,9 +5236,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 11,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5249,7 +5249,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 1
@@ -5271,10 +5271,10 @@
       "hd": 8,
       "type": "Elemental",
       "init": 5,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 18,
       "reach": 10,
-      "grapple": 13,
+      "grapple": 12,
       "ability_scores": {
         "strength": 14,
         "dexterity": 21,
@@ -5284,9 +5284,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 13,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5297,7 +5297,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 2,
             "dice_sides": 6,
             "damage_bonus": 2
@@ -5323,10 +5323,10 @@
       "hd": 16,
       "type": "Elemental",
       "init": 7,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 19,
       "reach": 15,
-      "grapple": 19,
+      "grapple": 18,
       "ability_scores": {
         "strength": 18,
         "dexterity": 25,
@@ -5336,9 +5336,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 16,
+        "fortitude": 15,
         "reflex": 15,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5349,7 +5349,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 4
@@ -5375,10 +5375,10 @@
       "hd": 21,
       "type": "Elemental",
       "init": 8,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 24,
       "reach": 15,
-      "grapple": 20,
+      "grapple": 19,
       "ability_scores": {
         "strength": 20,
         "dexterity": 27,
@@ -5388,9 +5388,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 16,
+        "fortitude": 15,
         "reflex": 16,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5401,7 +5401,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 5
@@ -5427,10 +5427,10 @@
       "hd": 24,
       "type": "Elemental",
       "init": 9,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 25,
       "reach": 15,
-      "grapple": 21,
+      "grapple": 20,
       "ability_scores": {
         "strength": 22,
         "dexterity": 29,
@@ -5440,9 +5440,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 16,
+        "fortitude": 15,
         "reflex": 17,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5453,7 +5453,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 11,
+            "attack_bonus": 10,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 6
@@ -5479,10 +5479,10 @@
       "hd": 2,
       "type": "Elemental",
       "init": 0,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 17,
       "reach": 5,
-      "grapple": 5,
+      "grapple": 4,
       "ability_scores": {
         "strength": 14,
         "dexterity": 10,
@@ -5492,9 +5492,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 8,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5509,7 +5509,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 2
@@ -5531,10 +5531,10 @@
       "hd": 4,
       "type": "Elemental",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 19,
       "reach": 5,
-      "grapple": 10,
+      "grapple": 9,
       "ability_scores": {
         "strength": 16,
         "dexterity": 12,
@@ -5544,9 +5544,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 15,
+        "fortitude": 14,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5561,7 +5561,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 3
@@ -5583,10 +5583,10 @@
       "hd": 8,
       "type": "Elemental",
       "init": 2,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 20,
       "reach": 10,
-      "grapple": 16,
+      "grapple": 15,
       "ability_scores": {
         "strength": 20,
         "dexterity": 14,
@@ -5596,9 +5596,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 16,
+        "fortitude": 15,
         "reflex": 10,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5613,7 +5613,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 11,
+            "attack_bonus": 10,
             "dice_count": 2,
             "dice_sides": 8,
             "damage_bonus": 5
@@ -5639,10 +5639,10 @@
       "hd": 16,
       "type": "Elemental",
       "init": 4,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 21,
       "reach": 15,
-      "grapple": 22,
+      "grapple": 21,
       "ability_scores": {
         "strength": 24,
         "dexterity": 18,
@@ -5652,9 +5652,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 17,
+        "fortitude": 16,
         "reflex": 12,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5669,7 +5669,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 12,
+            "attack_bonus": 11,
             "dice_count": 2,
             "dice_sides": 10,
             "damage_bonus": 7
@@ -5695,10 +5695,10 @@
       "hd": 21,
       "type": "Elemental",
       "init": 5,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 22,
       "reach": 15,
-      "grapple": 23,
+      "grapple": 22,
       "ability_scores": {
         "strength": 26,
         "dexterity": 20,
@@ -5708,9 +5708,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 17,
+        "fortitude": 16,
         "reflex": 13,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5725,7 +5725,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 13,
+            "attack_bonus": 12,
             "dice_count": 2,
             "dice_sides": 10,
             "damage_bonus": 8
@@ -5751,10 +5751,10 @@
       "hd": 24,
       "type": "Elemental",
       "init": 6,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 23,
       "reach": 15,
-      "grapple": 24,
+      "grapple": 23,
       "ability_scores": {
         "strength": 28,
         "dexterity": 22,
@@ -5764,9 +5764,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 17,
+        "fortitude": 16,
         "reflex": 14,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5781,7 +5781,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 14,
+            "attack_bonus": 13,
             "dice_count": 2,
             "dice_sides": 10,
             "damage_bonus": 9
@@ -5807,10 +5807,10 @@
       "hd": 7,
       "type": "Elemental",
       "init": 5,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 22,
       "reach": 10,
-      "grapple": 13,
+      "grapple": 12,
       "ability_scores": {
         "strength": 14,
         "dexterity": 21,
@@ -5820,9 +5820,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 13,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5837,7 +5837,7 @@
         "natural_weapons": [{
             "type": "Wing",
             "role": "Primary",
-            "attack_bonus": 8,
+            "attack_bonus": 7,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 2
@@ -5845,7 +5845,7 @@
           {
             "type": "Bite",
             "role": "Secondary",
-            "attack_bonus": 3,
+            "attack_bonus": 2,
             "dice_count": 1,
             "dice_sides": 4,
             "damage_bonus": 1
@@ -5853,7 +5853,7 @@
           {
             "type": "Claw",
             "role": "Secondary",
-            "attack_bonus": 3,
+            "attack_bonus": 2,
             "dice_count": 1,
             "dice_sides": 3,
             "damage_bonus": 1
@@ -5887,10 +5887,10 @@
       "hd": 8,
       "type": "Elemental",
       "init": 4,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 17,
       "reach": 10,
-      "grapple": 15,
+      "grapple": 14,
       "ability_scores": {
         "strength": 18,
         "dexterity": 19,
@@ -5900,9 +5900,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 14,
+        "fortitude": 13,
         "reflex": 12,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5917,7 +5917,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 2,
             "dice_sides": 6,
             "damage_bonus": 4
@@ -5939,10 +5939,10 @@
       "hd": 2,
       "type": "Elemental",
       "init": 0,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 17,
       "reach": 5,
-      "grapple": 5,
+      "grapple": 4,
       "ability_scores": {
         "strength": 15,
         "dexterity": 11,
@@ -5952,9 +5952,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 8,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -5965,7 +5965,7 @@
         "natural_weapons": [{
             "type": "Burning Touch",
             "role": "Primary",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 1,
             "dice_sides": 8,
             "damage_bonus": 2
@@ -5973,7 +5973,7 @@
           {
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 10,
+            "attack_bonus": 9,
             "dice_count": 1,
             "dice_sides": 3,
             "damage_bonus": 2
@@ -5999,10 +5999,10 @@
       "hd": 3,
       "type": "Elemental",
       "init": 1,
-      "bab": 7,
+      "bab": 6,
       "armorclass": 18,
       "reach": 5,
-      "grapple": 9,
+      "grapple": 8,
       "ability_scores": {
         "strength": 15,
         "dexterity": 13,
@@ -6012,9 +6012,9 @@
         "charisma": 14
       },
       "saves": {
-        "fortitude": 13,
+        "fortitude": 12,
         "reflex": 9,
-        "will": 17
+        "will": 16
       },
       "speeds": [{
           "geography": "Land",
@@ -6029,7 +6029,7 @@
         "natural_weapons": [{
             "type": "Slam",
             "role": "Primary",
-            "attack_bonus": 9,
+            "attack_bonus": 8,
             "dice_count": 1,
             "dice_sides": 6,
             "damage_bonus": 2

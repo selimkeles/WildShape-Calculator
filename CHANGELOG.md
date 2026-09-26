@@ -22,3 +22,21 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 - None 
+
+## [v1.1]
+
+### Added
+-
+
+### Changed
+- Fixed 0th element array error
+- Reduced margin at a4 output borders
+
+### Deprecated
+- None
+
+### Removed
+- monster.db
+
+### Fixed
+- None 
